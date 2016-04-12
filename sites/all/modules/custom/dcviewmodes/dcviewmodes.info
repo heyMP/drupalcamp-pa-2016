@@ -1,0 +1,4 @@
+name = Drupal Camp Viewmodes
+description = Custom Viewmodes
+package = Drupalcamp
+core = 7.x

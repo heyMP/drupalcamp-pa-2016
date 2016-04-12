@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the drupalcamppa_aurora feature.
+ */
+
+include_once 'drupalcamppa_aurora.features.inc';

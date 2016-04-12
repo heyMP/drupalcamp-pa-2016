@@ -1,0 +1,82 @@
+img, media {
+  max-width: 100%;
+}
+
+/* No files to import found in partials/components/**\/* */
+
+html, body {
+	background-color: #000000;
+		background-image: url('../images/bridge.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.l-region--sidebar-first,
+.l-region--sidebar-second,
+.l-content {
+	background-color: #ffffff;
+}
+
+.has-two-sidebars .l-region--sidebar-first, .has-two-sidebars .l-region--sidebar-second {
+	background-color: #ffffff;
+}
+
+#block-delta-blocks-logo {
+	margin-left: 43%;
+	margin-top: 75px;
+}
+
+.l-region--header {
+	margin-top: 110px;
+}
+
+.l-region--navigation {
+
+}
+
+.menu {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#block-menu-menu-menu-quick-links {
+	float: right;
+}
+
+#block-menu-menu-menu-quick-links ul li a {
+	color: #ffffff;
+}
+
+#block-menu-menu-menu-quick-links ul li {
+	list-style: none;
+	display: inline;
+}
+#header-slogan {
+	margin-right: 43%;
+	text-align: center;
+}
+
+#header-slogan h1 {
+	color: #ffffff;
+	font-size: 1.9em;
+}
+
+.l-region--navigation {
+	background-color: #003366;
+
+}
+
+#block-system-main-menu ul li {
+	list-style: none;
+	display: inline;
+}
+
+#block-system-main-menu ul li a {
+	color: #ffffff;
+	text-decoration: none;
+	margin-left: 1em;
+	margin-right: 1em;
+	font-size: 1.5em;
+}

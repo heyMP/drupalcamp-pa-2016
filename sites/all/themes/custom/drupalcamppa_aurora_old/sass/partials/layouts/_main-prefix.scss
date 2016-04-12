@@ -1,0 +1,53 @@
+#main-prefix {
+  position: relative;
+  background-color: $light-brown;
+  padding: $main-content-padding * 2;
+  @include breakpoint($what-this-about--two-colums) {
+    @include display-box;
+    @include box-orient(horizontal);
+    @include box-align(stretch);
+    @include align-content(center);
+    display: flex;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    @include triangle($light-brown, 2em, 5em, 180);
+    position: absolute;
+    bottom: -1.9em;
+    right: 50%;
+    margin-right: -2.5em;
+    z-index: 100;
+  }
+
+  .block {
+    max-width: 600px;
+    margin: auto;
+    padding: 5%;
+    @include breakpoint($what-this-about--two-colums) {
+      width: 50%;
+      margin: 0 auto;
+      max-width: none;
+
+      .no-flexbox {
+        float: left;
+      }
+    }
+
+    header {
+      h2 {
+        margin-top:0;
+        color: white;
+      }
+    }
+  }
+
+  .view {
+    .more-link {
+      a {
+        @extend .button--more;
+      }
+    }
+  }
+}

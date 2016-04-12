@@ -1,0 +1,38 @@
+.keynotes {
+  .keynote {
+    display: block;
+    overflow: hidden;
+    color: #C9C9C9;
+
+    .day {
+      @extend .ubuntu;
+      margin-bottom: .5em;
+    }
+
+    .image {
+      width: 50%;
+      padding-right: 1em;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .name {
+      font-size: 28px;
+      line-height: 100%;
+      margin-top: 0;
+
+      a {
+        @extend .button;
+        @extend .pathway-gothic;
+        color: white;
+        text-decoration: none;
+        border-left: 5px solid white;
+        font-size: 26px;
+        line-height: 100%;
+        padding-left: .5em;
+      }
+    }
+  }
+}

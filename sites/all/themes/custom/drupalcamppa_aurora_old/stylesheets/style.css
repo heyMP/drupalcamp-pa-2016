@@ -1,0 +1,1881 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic|Pathway+Gothic+One);
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/\.rvm\/gems\/ruby-2\.1\.1\@drupalcamppa_aurora\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_box-sizing\.scss}line{font-family:\0000336}}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url('../behaviors/box-sizing/boxsizing.php');
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/\.rvm\/gems\/ruby-2\.1\.1\@drupalcamppa_aurora\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_fluid-media\.scss}line{font-family:\000034}}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * @file
+ * Generic theme-independent base styles.
+ */
+/**
+ * Autocomplete.
+ *
+ * @see autocomplete.js
+ */
+/* Suggestion list */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000313}}
+#autocomplete {
+  border: 1px solid;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000319}}
+#autocomplete ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000325}}
+#autocomplete li {
+  background: #fff;
+  color: #000;
+  cursor: default;
+  white-space: pre;
+  zoom: 1;
+  /* IE7 */
+}
+
+/* Animated throbber */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000333}}
+html.js input.form-autocomplete {
+  background-image: url(../../misc/throbber.gif);
+  background-position: 100% 2px;
+  /* LTR */
+  background-repeat: no-repeat;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000338}}
+html.js input.throbbing {
+  background-position: 100% -18px;
+  /* LTR */
+}
+
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000347}}
+html.js fieldset.collapsed {
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  height: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000353}}
+html.js fieldset.collapsed .fieldset-wrapper {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000356}}
+fieldset.collapsible {
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000359}}
+fieldset.collapsible .fieldset-legend {
+  display: block;
+}
+
+/**
+ * Resizable textareas.
+ *
+ * @see textarea.js
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000368}}
+.form-textarea-wrapper textarea {
+  display: block;
+  margin: 0;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000376}}
+.resizable-textarea .grippie {
+  background: #eeeeee url(../../misc/grippie.png) no-repeat center 2px;
+  border: 1px solid #ddd;
+  border-top-width: 0;
+  cursor: s-resize;
+  height: 9px;
+  overflow: hidden;
+}
+
+/**
+ * TableDrag behavior.
+ *
+ * @see tabledrag.js
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\0000390}}
+body.drag {
+  cursor: move;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003114}}
+div.indentation {
+  float: left;
+  /* LTR */
+  height: 1.7em;
+  margin: -0.4em 0.2em -0.4em -0.4em;
+  /* LTR */
+  padding: 0.42em 0 0.42em 0.6em;
+  /* LTR */
+  width: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003121}}
+div.tree-child {
+  background: url(../../misc/tree.png) no-repeat 11px center;
+  /* LTR */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003124}}
+div.tree-child-last {
+  background: url(../../misc/tree-bottom.png) no-repeat 11px center;
+  /* LTR */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003127}}
+div.tree-child-horizontal {
+  background: url(../../misc/tree.png) no-repeat -11px center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003130}}
+.tabledrag-toggle-weight-wrapper {
+  text-align: right;
+  /* LTR */
+}
+
+/**
+ * TableHeader behavior.
+ *
+ * @see tableheader.js
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003139}}
+table.sticky-header {
+  background-color: #fff;
+  margin-top: 0;
+}
+
+/**
+ * Progress behavior.
+ *
+ * @see progress.js
+ */
+/* Bar */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003150}}
+.progress .bar {
+  background-color: #fff;
+  border: 1px solid;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003154}}
+.progress .filled {
+  background-color: #000;
+  height: 1.5em;
+  width: 5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003159}}
+.progress .percentage {
+  float: right;
+  /* LTR */
+}
+
+/* Throbber */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003163}}
+.ajax-progress {
+  display: inline-block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003166}}
+.ajax-progress .throbber {
+  background: transparent url(../../misc/throbber.gif) no-repeat 0px -18px;
+  float: left;
+  /* LTR */
+  height: 15px;
+  margin: 2px;
+  width: 15px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003173}}
+.ajax-progress .message {
+  padding-left: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003176}}
+tr .ajax-progress .throbber {
+  margin: 0 2px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003179}}
+.ajax-progress-bar {
+  width: 16em;
+}
+
+/**
+ * Inline items.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003186}}
+.container-inline div,
+.container-inline label {
+  display: inline;
+}
+
+/* Fieldset contents always need to be rendered as block. */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003191}}
+.container-inline .fieldset-wrapper {
+  display: block;
+}
+
+/**
+ * Prevent text wrapping.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003198}}
+.nowrap {
+  white-space: nowrap;
+}
+
+/**
+ * For anything you want to hide on page load when JS is enabled, so
+ * that you can use the JS to control visibility and avoid flicker.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003206}}
+html.js .js-hide {
+  display: none;
+}
+
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003218}}
+.element-hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user.
+ * "!important" is used to prevent unintentional overrides.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003230}}
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+}
+
+/**
+ * The .element-focusable class extends the .element-invisible class to allow
+ * the element to be focusable when navigated to via the keyboard.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003242}}
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+  position: static !important;
+  clip: auto;
+  overflow: visible;
+  height: auto;
+}
+
+/**
+ * Markup free clearing.
+ *
+ * @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003255}}
+.clearfix:after, .venue:after, #footer .block:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* IE6 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003263}}
+* html .clearfix, * html .venue, * html #footer .block, #footer * html .block {
+  height: 1%;
+}
+
+/* IE7 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_drupal-overriden_forms\.scss}line{font-family:\00003267}}
+*:first-child + html .clearfix, *:first-child + html .venue, *:first-child + html #footer .block, #footer *:first-child + html .block {
+  min-height: 1%;
+}
+
+/**
+ * @param $selector Name of the psuedo selector
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_extendables\.scss}line{font-family:\000038}}
+.clearfix, .venue, #footer .block {
+  zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_extendables\.scss}line{font-family:\0000310}}
+.clearfix:before, .venue:before, #footer .block:before, .clearfix:after, .venue:after, #footer .block:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_extendables\.scss}line{font-family:\0000316}}
+.clearfix:after, .venue:after, #footer .block:after {
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_extendables\.scss}line{font-family:\0000321}}
+.wrapper {
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_typography\.scss}line{font-family:\0000312}}
+.ubuntu, .ubuntu--italic, .ubuntu--bold, h1, .h1, h5, .h5, h6, .h6, .site-name__name, .button--standard, .button--call-to-action, input#edit-submit--2, input#edit-submit, .button--secondary, .button--tertiary, .secondary-menu header h2 a, .secondary-menu ul.menu a, .button--tertiary-selected, .button--list-menu, #menu:after, #menu .menu-block-wrapper li a, input[type="text"], textarea, input[type="password"], input[type="email"], body, h4, .h4, .keynotes .keynote .day {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_typography\.scss}line{font-family:\0000316}}
+.ubuntu--italic {
+  font-weight: 400;
+  font-style: italic;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_typography\.scss}line{font-family:\0000321}}
+.ubuntu--bold, h1, .h1, h5, .h5, h6, .h6, .site-name__name {
+  font-weight: 700;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_typography\.scss}line{font-family:\0000326}}
+.pathway-gothic, h2, .h2, h3, .h3, .huge-action-buttons .button, .huge-action-buttons .node-news.node-teaser h2 a, .node-news.node-teaser h2 .huge-action-buttons a, .keynotes .keynote .name a, .node-news.node-teaser h2, #menu:after, #menu .menu-block-wrapper li a, .view-recent-news, .site-name__dates, #footer .block header h2 {
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/\.rvm\/gems\/ruby-2\.1\.1\@drupalcamppa_aurora\/gems\/compass-core-1\.0\.0\.alpha\.20\/stylesheets\/compass\/typography\/_vertical_rhythm\.scss}line{font-family:\00003106}}
+html {
+  font-size: 100%;
+  line-height: 1.625em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\000031}}
+.button, .keynotes .keynote .name a, .node-news.node-teaser h2 a,
+a {
+  color: #1f79bc;
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\000036}}
+.button:hover, .keynotes .keynote .name a:hover, .node-news.node-teaser h2 a:hover,
+a:hover {
+  color: #ffa022;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\0000311}}
+.footer-button, .footer-links .menu li a, #footer .block a {
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #f4b830;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\0000316}}
+.footer-button:hover, .footer-links .menu li a:hover, #footer .block a:hover {
+  color: #f9d991;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\0000321}}
+.button--standard {
+  background: white;
+  border: 1px solid #e6e6e6;
+  padding: .5em 1em;
+  color: #ffa022 !important;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  padding-right: 2em;
+  -moz-transform: all 1s ease;
+  -ms-transform: all 1s ease;
+  -webkit-transform: all 1s ease;
+  transform: all 1s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_mixins\.scss}line{font-family:\00003159}}
+.button--standard:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-color: #b71f21;
+  border-width: 0.5em 0 0.5em 0.8em;
+  position: absolute;
+  right: .5em;
+  top: 50%;
+  margin-top: -.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_mixins\.scss}line{font-family:\00003169}}
+.button--standard:hover {
+  background: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\0000327}}
+.button--call-to-action, input#edit-submit--2, input#edit-submit {
+  background: #ffa022;
+  border: 1px solid #ee8800;
+  padding: .5em 1em;
+  color: white !important;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  padding-right: 2em;
+  margin-bottom: .5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_mixins\.scss}line{font-family:\00003159}}
+.button--call-to-action:after, input#edit-submit--2:after, input#edit-submit:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-color: #f4b830;
+  border-width: 0.5em 0 0.5em 0.8em;
+  position: absolute;
+  right: .5em;
+  top: 50%;
+  margin-top: -.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_mixins\.scss}line{font-family:\00003169}}
+.button--call-to-action:hover, input#edit-submit--2:hover, input#edit-submit:hover {
+  background: #ffa731;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\0000333}}
+.button--secondary {
+  background: white;
+  border: 1px solid #e6e6e6;
+  padding: .5em 1em;
+  color: #ffa022 !important;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  text-transform: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_mixins\.scss}line{font-family:\00003169}}
+.button--secondary:hover {
+  background: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\0000339}}
+.button--tertiary, .secondary-menu header h2 a, .secondary-menu ul.menu a {
+  background: #60646e;
+  border: 1px solid #484b53;
+  padding: .5em 1em;
+  color: white !important;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  padding-right: 2em;
+  margin-bottom: .5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_mixins\.scss}line{font-family:\00003159}}
+.button--tertiary:after, .secondary-menu header h2 a:after, .secondary-menu ul.menu a:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-color: #f4b830;
+  border-width: 0.5em 0 0.5em 0.8em;
+  position: absolute;
+  right: .5em;
+  top: 50%;
+  margin-top: -.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_mixins\.scss}line{font-family:\00003169}}
+.button--tertiary:hover, .secondary-menu header h2 a:hover, .secondary-menu ul.menu a:hover {
+  background: #676b76;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\0000345}}
+.button--tertiary-selected {
+  background: #ffa022;
+  border: 1px solid #ee8800;
+  padding: .5em 1em;
+  color: white !important;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  padding-right: 2em;
+  text-transform: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_mixins\.scss}line{font-family:\00003159}}
+.button--tertiary-selected:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-color: #5b4e42;
+  border-width: 0.5em 0 0.5em 0.8em;
+  position: absolute;
+  right: .5em;
+  top: 50%;
+  margin-top: -.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_mixins\.scss}line{font-family:\00003169}}
+.button--tertiary-selected:hover {
+  background: #ffa731;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\0000351}}
+.button--list-menu, #menu:after, #menu .menu-block-wrapper li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em 1em;
+  text-align: center;
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\0000360}}
+.button--more, #main-prefix .view .more-link a {
+  background: #2d241c;
+  color: white;
+  padding: .5em 1em;
+  text-decoration: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_buttons\.scss}line{font-family:\0000367}}
+.button--more:hover, #main-prefix .view .more-link a:hover {
+  color: #f4b830;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_forms\.scss}line{font-family:\000031}}
+input[type="text"], textarea, input[type="password"], input[type="email"] {
+  background: #f4f4f3;
+  font-size: 1.125em;
+  line-height: 1.44444em;
+  padding: .3em .5em;
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000321}}
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000326}}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000332}}
+.page-admin-appearance-styleguide #admin-menu {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000336}}
+.styleguide {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000336}}
+  .styleguide {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+@media (min-width: 60em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000336}}
+  .styleguide {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000340}}
+body {
+  font-size: 1em;
+  line-height: 1.625em;
+  margin: 0;
+  padding: 0;
+  background: #16120d;
+  display: block;
+  height: 100%;
+  widows: 100%;
+  font-size: 80%;
+}
+@media (min-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000340}}
+  body {
+    font-size: 100%;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000355}}
+h1, .h1 {
+  font-size: 3em;
+  line-height: 1.08333em;
+  text-transform: uppercase;
+  line-height: 130%;
+  color: #2d241c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000362}}
+h2, .h2 {
+  font-size: 2.5em;
+  line-height: 1.3em;
+  line-height: 130%;
+  color: #2d241c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000368}}
+h3, .h3 {
+  font-size: 1.8em;
+  line-height: 1.80556em;
+  line-height: 130%;
+  color: #5b4e42;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000374}}
+h4, .h4 {
+  font-size: 1.2em;
+  line-height: 1.35417em;
+  line-height: 150%;
+  color: #5b4e42;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000380}}
+h5, .h5 {
+  font-size: 1em;
+  line-height: 1.625em;
+  line-height: 150%;
+  color: #2d241c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000386}}
+h6, .h6 {
+  font-size: 1em;
+  line-height: 1.625em;
+  line-height: 150%;
+  color: #2d241c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\0000393}}
+input[type="text"] {
+  max-width: 30em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003100}}
+input.form-autocomplete {
+  position: relative;
+  background-position: 100% 21px !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003104}}
+input.form-autocomplete.throbbing {
+  background-position: 100% -17px !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003108}}
+input[type="password"] {
+  max-width: 30em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003112}}
+input[type="email"] {
+  max-width: 30em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003117}}
+input#edit-submit--2 {
+  padding-right: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003121}}
+input#edit-submit {
+  padding-right: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003125}}
+.tabledrag-handle {
+  cursor: move;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003128}}
+.tabledrag-handle .handle {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCg0KPCEtLSBMaWNlbnNlIEFncmVlbWVudCBhdCBodHRwOi8vaWNvbm1vbnN0ci5jb20vbGljZW5zZS8gLS0+DQoNCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBvbHlnb24gaWQ9ImN1cnNvci1tb3ZlLTItaWNvbiIgcG9pbnRzPSI0NjIsMjU1LjU2NCAzNzguODE4LDE3NS43ODYgMzc4LjgxOCwyMjYuMzc5IDI4NS42MjEsMjI2LjM3OSAyODUuNjIxLDEzNi43NzMgDQoJMzM2LjIxMiwxMzYuNzczIDI1NS41NjIsNTAgMTc1Ljc4NiwxMzYuNzczIDIyNy4yNTMsMTM2Ljc3MyAyMjcuMjUzLDIyNi4zNzkgMTM2Ljc3MywyMjYuMzc5IDEzNi43NzMsMTc1Ljc4OCA1MCwyNTYuNDM4IA0KCTEzNi43NzMsMzM2LjIxNCAxMzYuNzczLDI4NC43NDcgMjI3LjI1MywyODQuNzQ3IDIyNy4yNTMsMzc4LjgxOCAxNzYuNjU5LDM3OC44MTggMjU2LjQzNiw0NjIgMzM2LjIxNCwzNzguODE4IDI4NS42MjEsMzc4LjgxOCANCgkyODUuNjIxLDI4NC43NDcgMzc4LjgxOCwyODQuNzQ3IDM3OC44MTgsMzM1LjM0MSAiLz4NCjwvc3ZnPg0K');
+  background-repeat: no-repeat;
+  height: 0;
+  margin: -1em 0em;
+  margin-left: .5em;
+  padding: 0;
+  width: 33px;
+  background-size: 84%;
+  padding: 0;
+  padding-top: 67%;
+  pointer: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003141}}
+.no-svg .tabledrag-handle .handle {
+  background-image: url('../images/move.png');
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003152}}
+#main blockquote {
+  border-left: 5px solid #1f79bc;
+  margin: 1em 0;
+  padding: 0 2em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/styleguide\/_style-guide\.scss}line{font-family:\00003159}}
+#main .tabs.primary a {
+  margin-bottom: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_blocks\.scss}line{font-family:\000031}}
+.aside-block {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  background: #60646e;
+  width: 100%;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_blocks\.scss}line{font-family:\000031}}
+  .aside-block {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+@media (min-width: 60em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_blocks\.scss}line{font-family:\000031}}
+  .aside-block {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_footer-info\.scss}line{font-family:\000031}}
+.footer-info {
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/global\/_mixins\.scss}line{font-family:\0000394}}
+.footer-info > p:first-child, .footer-info > p:last-child, .footer-info > p:last-child > p:last-child, .footer-info > p:last-child > p:last-child > p:last-child {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_footer-info\.scss}line{font-family:\000035}}
+.backgroundsize .footer-info .twitter {
+  height: 0;
+  padding-top: 75px;
+  width: 75px;
+  background: url('../images/Icons/SVG/twitter3white.svg') 0 0;
+  background-size: 100% 100%;
+  display: block;
+  overflow: hidden;
+  margin: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_footer-links\.scss}line{font-family:\000031}}
+.footer-links {
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_footer-links\.scss}line{font-family:\000034}}
+.footer-links .menu {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_footer-links\.scss}line{font-family:\000039}}
+.footer-links .menu li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_footer-links\.scss}line{font-family:\0000316}}
+.footer-links .menu li a {
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  display: inline-block;
+}
+
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\000031}}
+  .huge-action-buttons-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -ms-box-align: stretch;
+    box-align: stretch;
+    display: flex;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000310}}
+.huge-action-buttons {
+  position: relative;
+  display: block;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000310}}
+  .huge-action-buttons {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000318}}
+.huge-action-buttons p {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000323}}
+.huge-action-buttons .button, .huge-action-buttons .keynotes .keynote .name a, .keynotes .keynote .name .huge-action-buttons a, .huge-action-buttons .node-news.node-teaser h2 a, .node-news.node-teaser h2 .huge-action-buttons a {
+  padding: .5em 0;
+  text-decoration: none;
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  line-height: 100%;
+  position: relative;
+  margin-bottom: 0;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000323}}
+  .huge-action-buttons .button, .huge-action-buttons .keynotes .keynote .name a, .keynotes .keynote .name .huge-action-buttons a, .huge-action-buttons .node-news.node-teaser h2 a, .node-news.node-teaser h2 .huge-action-buttons a {
+    font-size: 58px;
+    width: 100%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000339}}
+  .no-flexbox .huge-action-buttons .button, .no-flexbox .huge-action-buttons .keynotes .keynote .name a, .keynotes .keynote .name .no-flexbox .huge-action-buttons a, .no-flexbox .huge-action-buttons .node-news.node-teaser h2 a, .node-news.node-teaser h2 .no-flexbox .huge-action-buttons a {
+    float: left;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000344}}
+.huge-action-buttons .button span, .huge-action-buttons .keynotes .keynote .name a span, .keynotes .keynote .name .huge-action-buttons a span, .huge-action-buttons .node-news.node-teaser h2 a span, .node-news.node-teaser h2 .huge-action-buttons a span {
+  display: block;
+  text-transform: none;
+  font-size: .6em;
+  color: #1f79bc;
+  line-height: 100%;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000344}}
+  .huge-action-buttons .button span, .huge-action-buttons .keynotes .keynote .name a span, .keynotes .keynote .name .huge-action-buttons a span, .huge-action-buttons .node-news.node-teaser h2 a span, .node-news.node-teaser h2 .huge-action-buttons a span {
+    font-size: .4em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000356}}
+.huge-action-buttons .primary {
+  background: #f4b830;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000359}}
+.huge-action-buttons .primary:hover {
+  background: #f3b018;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000364}}
+.huge-action-buttons .secondary {
+  background: #2d241c;
+  color: #f4b830;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000368}}
+.huge-action-buttons .secondary:hover {
+  background: #1d1712;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_huge-action-buttons\.scss}line{font-family:\0000372}}
+.huge-action-buttons .secondary span {
+  color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_images\.scss}line{font-family:\000031}}
+.field-name-field-image {
+  text-align: center;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_images\.scss}line{font-family:\000031}}
+  .field-name-field-image {
+    float: left;
+    margin: 1em;
+    margin-bottom: .5em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_images\.scss}line{font-family:\0000310}}
+.field-name-field-image img {
+  border: 2px solid #F0F0F0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_keynote-block\.scss}line{font-family:\000032}}
+.keynotes .keynote {
+  display: block;
+  overflow: hidden;
+  color: #C9C9C9;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_keynote-block\.scss}line{font-family:\000037}}
+.keynotes .keynote .day {
+  margin-bottom: .5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_keynote-block\.scss}line{font-family:\0000312}}
+.keynotes .keynote .image {
+  width: 50%;
+  padding-right: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_keynote-block\.scss}line{font-family:\0000316}}
+.keynotes .keynote .image img {
+  max-width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_keynote-block\.scss}line{font-family:\0000321}}
+.keynotes .keynote .name {
+  font-size: 28px;
+  line-height: 100%;
+  margin-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_keynote-block\.scss}line{font-family:\0000326}}
+.keynotes .keynote .name a {
+  color: white;
+  text-decoration: none;
+  border-left: 5px solid white;
+  font-size: 26px;
+  line-height: 100%;
+  padding-left: .5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_news\.scss}line{font-family:\000032}}
+.node-news .field-name-field-news-image {
+  text-align: center;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_news\.scss}line{font-family:\000032}}
+  .node-news .field-name-field-news-image {
+    float: left;
+    margin: 1em;
+    margin-bottom: .5em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_news\.scss}line{font-family:\0000310}}
+.node-news .field-name-field-news-image img {
+  border: 2px solid #F0F0F0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_news\.scss}line{font-family:\0000316}}
+.node-news.node-teaser h2 {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_news\.scss}line{font-family:\0000320}}
+.node-news.node-teaser h2 a {
+  color: white;
+  text-decoration: none;
+  border-left: 5px solid white;
+  font-size: 28px;
+  line-height: 100%;
+  padding-left: .5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\000031}}
+#menu {
+  background: transparent;
+  display: block;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\000036}}
+#menu:after {
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  content: 'menu';
+  display: block;
+  color: white;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  z-index: 100;
+  background-color: #16120d;
+  padding: .5em 1em;
+  font-size: 18px;
+}
+@media (min-width: 35em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\000036}}
+  #menu:after {
+    display: none;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000325}}
+#menu:hover {
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000329}}
+#menu .menu-block-wrapper {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  background: #16120d;
+}
+@media (min-width: 0) and (max-width: 35em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000329}}
+  #menu .menu-block-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: scroll;
+  }
+}
+@media (min-width: 35em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000329}}
+  #menu .menu-block-wrapper {
+    margin-top: 0.8125em;
+    margin-bottom: 0.8125em;
+  }
+}
+@media (min-width: 0) and (max-width: 35em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000348}}
+  #menu .menu-block-wrapper:before {
+    content: 'X';
+    display: block;
+    text-align: right;
+    color: white;
+    padding: 1em;
+    padding-bottom: 0;
+    font-size: 1.8em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000360}}
+#menu .menu-block-wrapper ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000366}}
+#menu .menu-block-wrapper li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+@media (min-width: 35em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000366}}
+  #menu .menu-block-wrapper li {
+    display: inline-block;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000374}}
+#menu .menu-block-wrapper li a {
+  font-size: 1.625em;
+  line-height: 2em;
+  text-transform: none;
+  color: #f4b830;
+  background: #16120d;
+  line-height: inherit;
+}
+@media (min-width: 35em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000374}}
+  #menu .menu-block-wrapper li a {
+    padding: 0.3em 0.5em;
+    font-size: 1.625em;
+    line-height: 2em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000389}}
+#menu .menu-block-wrapper li a:hover {
+  background: #3d3126;
+  color: #f4b830;
+}
+@media (min-width: 35em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_primary-nav\.scss}line{font-family:\0000389}}
+  #menu .menu-block-wrapper li a:hover {
+    background: #1f79bc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_schedule-item\.scss}line{font-family:\000033}}
+.node-schedule-item .field-name-body + * {
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_schedule\.scss}line{font-family:\000032}}
+.view-schedule .schedule__item {
+  background: #064771;
+  min-height: 6em;
+  padding: 1em;
+  display: block;
+  overflow: hidden;
+  margin: 1em 0;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_schedule\.scss}line{font-family:\0000311}}
+.view-schedule .schedule__item .title {
+  margin-top: 0;
+  color: #f4b830;
+  font-size: 1.6em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_schedule\.scss}line{font-family:\0000317}}
+.view-schedule .schedule__item .event-name {
+  color: white;
+  font-size: 1.3em;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_schedule\.scss}line{font-family:\0000324}}
+.view-schedule .schedule__item .event-name a {
+  color: white;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_schedule\.scss}line{font-family:\0000330}}
+.view-schedule .schedule__item .speakers {
+  color: rgba(255, 255, 255, 0.8);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_schedule\.scss}line{font-family:\0000335}}
+.view-schedule .view-grouping {
+  margin-bottom: 4em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_schedule\.scss}line{font-family:\0000338}}
+.view-schedule .view-grouping:last-of-type {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_schedule\.scss}line{font-family:\0000343}}
+.view-schedule .view-grouping-header {
+  font-size: 1.4em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_schedule\.scss}line{font-family:\0000347}}
+.view-schedule .schedule__event {
+  margin: 2em 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_secondary-menu\.scss}line{font-family:\000031}}
+.secondary-menu {
+  overflow: hidden;
+  *zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_secondary-menu\.scss}line{font-family:\000034}}
+.secondary-menu header h2 {
+  float: left;
+  font-size: 1em;
+  margin: 0.2em;
+  margin-right: .8em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_secondary-menu\.scss}line{font-family:\0000310}}
+.secondary-menu header h2 a {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_secondary-menu\.scss}line{font-family:\0000316}}
+.secondary-menu ul li.leaf {
+  list-style: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_secondary-menu\.scss}line{font-family:\0000320}}
+.secondary-menu ul.menu {
+  padding: 0;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_secondary-menu\.scss}line{font-family:\0000324}}
+.secondary-menu ul.menu li {
+  display: inline-block;
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sessions\.scss}line{font-family:\000032}}
+.node-session .field-label {
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\000031}}
+.site-name {
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  z-index: 0;
+  position: relative;
+  max-width: 960px;
+  margin: auto;
+}
+@media (min-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\000031}}
+  .site-name {
+    padding-top: 3.25em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000317}}
+.site-name:before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: black url('../images/bg-dcamppa.jpg') no-repeat center -6.5em fixed;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+@media (min-width: 58em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000317}}
+  .site-name:before {
+    background-size: cover;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000333}}
+.site-name:after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba(45, 171, 255, 0.62);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000345}}
+.site-name a {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000349}}
+.site-name__logo a {
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  width: 80%;
+  margin: auto;
+  max-width: 400px;
+  height: 0;
+  position: relative;
+  z-index: 10px;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDAwcHgiIGhlaWdodD0iNDAwcHgiIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0MDAgNDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiMwQjc3QkQiIGQ9Ik0yNjkuMDgxLDgxLjQ3MWMtMTkuMjU0LTExLjk4Ni0zNy40MTQtMTYuNzEtNTUuNTgtMjguNjk4Yy0xMS4yNi03LjYyOC0yNi44NzgtMjUuNzkxLTM5Ljk2LTQxLjQxMQ0KCQljLTIuNTQyLDI1LjA2NC0xMC4xNjgsMzUuMjM2LTE4Ljg4Nyw0Mi41MDFjLTE4LjUyNSwxNC41MzEtMzAuMTUsMTguODkxLTQ2LjEzNiwyNy42MDgNCgkJYy0xMy40MzgsNi45MDEtODYuNDUzLDUwLjQ5My04Ni40NTMsMTQ0LjIxM2MwLDkzLjcyMSw3OC44MjksMTYyLjczOSwxNjYuMzcsMTYyLjczOWM4Ny41NDUsMCwxNjMuNDY4LTYzLjU3MSwxNjMuNDY4LTE1OS44MzMNCgkJQzM1MS45MDMsMTMyLjMyNywyODAuNzA2LDg4LjczNSwyNjkuMDgxLDgxLjQ3MXoiLz4NCgk8cGF0aCBmaWxsPSIjMDA1QThEIiBkPSJNMzQyLjEyMywyNzIuOTM1Yy03NS4yNywyMy4zODUtMTUxLjA3Myw0NS4wNDktMjI3LjM0OCw2NC45ODZjLTEyLjE2OSwzLjE3OS0yNC4zNjQsNi4yNzItMzYuNTU3LDkuMzYyDQoJCWMzMC4wMTUsMjUuODg5LDY5LjIyOCw0MS4xMzksMTEwLjM3LDQxLjEzOWM3Ny42NjksMCwxNDYuMTQtNTAuMDYyLDE2MC42MTItMTI4LjU3Mw0KCQlDMzQ1Ljc3NiwyNjIuNTk3LDM0My41MjUsMjY3LjUyMiwzNDIuMTIzLDI3Mi45MzV6Ii8+DQoJPGc+DQoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0zODAuMzE3LDIwOS4yOTVjLTIuMjczLTEuMTU2LTMuODE3LTQuOTEtNS44NDktNS42NzZjLTEuNTg2LTAuNjA4LTMuMzg2LDEuNzItNS40MzIsMC4yOTkNCgkJCWMtMy4wNDMtMi4xMDgtMi42MzctOC4wMS01LjM1OC05LjgyYy0xLjc3OS0xLjE3OC00LjY0MSwwLjg0MS02Ljg1Mi0wLjY5M2MtMi4xNDgtMS40OTktMS44NzgtNC43ODMtMi4wNzktNi41NDcNCgkJCWMtMC4yMTQtMS42OS00LjEzNy03LjIzOC0xLjkzNC05LjQ3OWMwLjczMi0wLjc0NywyLjYzNywwLjAyOCwyLjk5NS0wLjk2MWMwLjQ1Ny0xLjI1NS0xLjQzLTQuNDc0LTAuNjY4LTUuNTUNCgkJCWMwLjU4LTAuODM5LDMuNjA1LTEuMTIyLDIuMTQzLTMuNThjLTEuNDc1LTIuNDcyLTYuNDExLTMuNjA2LTcuNDgyLTYuMjYyYy0wLjQ3OC0xLjE1NCw1LjIwNi03LjI4OSw1LjgzNS05LjA4MQ0KCQkJYzAuOTc5LTIuNzk0LDMuOS03LjExOCw0LjM5OC0xMC4wODRjMC4zNjctMi4xNjktMS4zNTItNC42NzItMS4xMTItNi44NjdjMC40NDktNC4xOCw0LjYyLTguMjQ4LDcuMzE1LTExLjA1MQ0KCQkJYzAsMC0yLjYxOC01LjA5Mi01LjA4My01LjU2OWMtMi41ODctMC41MDItNS43MTQsMS43NDctOC4zMSwxLjI0OGMtMS4xMTEtMC4yMjgtMS42NzMtMS44NjctMi44MDUtMS45NzkNCgkJCWMtMC4wMTEtMC4wMDMtMy45NDcsMS4yNjUtMy45NDcsMS4yNjVjLTEuNzUyLTAuNTUyLTcuNDQ2LTcuMTgxLTguMjc3LTguOTA0Yy0xLjEwMy0yLjIyNi0xLjc3NS0xMi4wNTktMy4yMjUtMTMuNDExDQoJCQljLTAuMDEzLTAuMDA1LTMuMzUtMC4zNTQtMy4zNzMtMC4zNjdjLTAuMDA2LTAuMDAzLDAuMTY1LTIuOTEzLDAuMTQ4LTIuOTI0Yy0yLjk1Mi0yLjkyLTguNjE5LDEuNjg4LTEwLjY0MywwLjUwOA0KCQkJYy0yLjUwMi0xLjQ4LTMuNTA4LTcuOTQ1LTguMjE0LTguOTM1Yy0yLjM5Ni0wLjUwOC0zMi4zOTQsMTAuMTUyLTM3LjIxLDExLjYzOWMtNTUuOTAxLDE3LjIzMy0xMTIuMTAyLDMzLjQ3OS0xNjguNTY0LDQ4LjcyOA0KCQkJYy0xNC4xMTEsMy44MDktMjguMjQ5LDcuNTY1LTQyLjM5NSwxMS4yNDdjLTIuMjM3LDAuNTg0LTEyLjM4Myw0LjcyMy0xNC4xNTcsMy42NjFjLTAuMTE3LTAuMDU4LTIuODAzLTkuNTk1LTUuODM3LTIwLjQ4OQ0KCQkJYy01LjMwMiw1LjMzOS0xMy41NTUsMTMuNzkzLTE4LjQyNywxNi4yOTVjLTAuMzc1LDAuMTkyLTEuMTEzLDAuMzY2LTIuNDMxLDEuODc0Yy0zLjEwMywzLjU4MS02LjkzLDYuMzAxLTEwLjAxNyw5Ljc3Nw0KCQkJYy0xLjUyOCwxLjY5MS0zLjkxNSwyLjM0OS01LjgwOSwzLjQ3NGMtMC44MzEsMC41MDItMS42OTMsMS4wNzUtMi41MzksMS41OTVjOS4xNTUsMzYuMTkxLDIwLjc5Niw4MS42NzksMjcuMzU4LDEwOC4yMTcNCgkJCWM0LjQ5LDE4LjEyOSw4Ljk3NiwzNi4yNjYsMTMuNDU5LDU0LjM5MWMwLjQ2MiwxLjgxNyw0LjQ4OSwxOC43OTcsNC42ODYsMTguOTA0YzAuMTk1LDAuMTMyLDE1LjAwNi0zLjczMiwxNi42MTItNC4xMjgNCgkJCWMxNS44MDgtMy45NzIsMzEuNjE1LTguMDE5LDQ3LjM4NS0xMi4xMzhjNzYuMjc1LTE5LjkzOCwxNTIuMDc5LTQxLjYwMiwyMjcuMzQ5LTY0Ljk4NmMyLjY0NS0xMC4yMTIsOC4yNzItMTguNzY1LDE5LjIwMS0xNC4wMjINCgkJCWMxLjEwMy0xLjgyOSwyLjQ1Ni0zLjk0MSwyLjg4NS00LjQxN2MyLjk0Ny0zLjI3LDkuMTIyLTQuNzEzLDExLjkyOS04LjEwN2MwLjY4NC0wLjg0LTAuNDMxLTkuNjcxLDMuMTM1LTguNjk4DQoJCQljMC4wOTMsMC4wMTgsMC4xMDUsMC4wNTksMC4xNjEsMC4wODVsMS4yNTEtMS40OTFjMCwwLDAuODYyLTAuNzcyLDEuMzE3LTEuMTQ0YzIuMDM0LTEuNzk0LDEuNjIzLTMuOTM4LDMuMDU3LTYuMDM2DQoJCQljMS40NjItMi4xNjcsMTEuNTIzLTEwLjM4MywxMC41NDYtMTIuMDc0QzM5My43MzcsMjE0LjA2MSwzODMuNDkyLDIxMC45MzIsMzgwLjMxNywyMDkuMjk1Ii8+DQoJCTxwYXRoIGZpbGw9IiMwMDVBOEQiIGQ9Ik01MC42NDgsMzU3LjI1MWgtMC45MzZsLTAuNjY4LTAuNDQxYy0xLjIyMS0wLjY4LTEuMzI5LTEuMTI3LTUuMDQyLTE2LjUzNg0KCQkJYy0wLjUwOC0yLjEwOC0wLjkwMS0zLjc0LTEuMDI3LTQuMjM1bC0wLjk4LTMuOTZjLTQuMTU5LTE2LjgxNC04LjMyLTMzLjYzNS0xMi40ODQtNTAuNDUNCgkJCWMtNC40NjctMTguMDYxLTExLjM4Ni00NS4yOTctMTguMDc3LTcxLjYzNWMtMy4xODItMTIuNTIzLTYuMzU2LTI1LjAxOS05LjI3OC0zNi41NjdsLTAuNTUxLTIuMThsMS45MTYtMS4xNzcNCgkJCWMwLjM3My0wLjIyOSwwLjc0OC0wLjQ2OSwxLjEyMy0wLjcwOGMwLjQ4Mi0wLjMwOCwwLjk2My0wLjYxNCwxLjQzNS0wLjg5OWMwLjc2NC0wLjQ1NCwxLjUxNy0wLjgxLDIuMjQ0LTEuMTUzDQoJCQljMS4xNjItMC41NDksMi4yNTktMS4wNjgsMi44NzgtMS43NTNjMS41OS0xLjc5MSwzLjM1Ni0zLjM4Myw1LjA2Mi00LjkyM2MxLjc2Ny0xLjU5NSwzLjQzNy0zLjEwMiw0LjkxMy00LjgwNg0KCQkJYzEuMzk1LTEuNTk2LDIuNDU4LTIuMTk5LDMuMzE2LTIuNThjNC4yMTYtMi4xNjIsMTEuODA4LTkuODE4LDE2LjgzMy0xNC44ODRsNC41NTgtNC41OWwxLjQxMiw1LjA2OQ0KCQkJYzMuMDE2LDEwLjgyOCw0LjQ1MywxNS44ODIsNS4xMzYsMTguMjI4YzIuMjU3LTAuNDg4LDUuOTIzLTEuNzczLDcuODg5LTIuNDYzYzEuNDgyLTAuNTIsMi41NTMtMC44OTUsMy4yNDgtMS4wNzcNCgkJCWMxMy40OTQtMy41MTIsMjcuNzQ5LTcuMjkzLDQyLjM3MS0xMS4yNGM1Ni4xODYtMTUuMTc1LDExMi44NjMtMzEuNTYsMTY4LjQ2LTQ4LjY5OGMxLjE4LTAuMzY0LDQuMDA2LTEuMzI2LDcuNTg1LTIuNTQ0DQoJCQljMTguMDIxLTYuMTM0LDI3LjY1Ny05LjI0OCwzMC4zMTUtOS4yNDhjMC4zMDIsMCwwLjU3OSwwLjAyNywwLjg0NiwwLjA4NGM0LjIzMSwwLjg5LDYuMjM5LDQuNDU4LDcuNzA1LDcuMDYzDQoJCQljMC4zNCwwLjYwMywwLjgxMiwxLjQ0MSwxLjE2OCwxLjkyMmMwLjQ2LTAuMTE3LDEuMTE0LTAuMzM4LDEuNTk1LTAuNWMxLjU0OS0wLjUyMSwzLjMwMy0xLjExMiw1LjE0Ni0xLjExMg0KCQkJYzIuMjAyLDAsMy42NzYsMC44NzgsNC41NjUsMS42ODdjMC44MzMsMC42NDIsMS4wNiwxLjMxNiwxLjA3MSwyLjU1MWMwLjkxNSwwLjA5OSwwLjk2LDAuMTE2LDEuMjgyLDAuMjM5bDAuNTYxLDAuMjEzbDAuNDM5LDAuNDENCgkJCWMxLjQzNiwxLjMzOSwxLjk0OSwzLjcxNywyLjg1OCw5LjIyNmMwLjI5MSwxLjc1OSwwLjcyOSw0LjQxOCwxLjAyNiw1LjA3NGMwLjYyMiwxLjIxOCw0LjE3Myw1LjMyMiw1Ljk3Nyw2Ljg5NA0KCQkJYzMuMDA2LTAuOTY2LDMuMDU5LTAuOTY2LDMuNTAxLTAuOTY2bDAuMywwLjAxNWMxLjczOCwwLjE3MSwyLjc3NCwxLjI4NywzLjM5NSwxLjk1M2MwLjAyMywwLjAyNiwwLjA0NywwLjA1MiwwLjA3LDAuMDc4DQoJCQljMC42MTItMC4wNDEsMS40NzEtMC4zMDQsMi4zMDMtMC41NThjMS4yNzItMC4zODksMi43MTYtMC44Myw0LjI0My0wLjgzYzAuNDc3LDAsMC45NDMsMC4wNDQsMS4zODcsMC4xMw0KCQkJYzMuNTQxLDAuNjg1LDYuMjI5LDUuMjQ1LDcuMjIyLDcuMTc0bDAuOTk5LDEuOTQ0bC0yLjAzNywyLjExN2MtMi4yNDksMi4zMjYtNS42NDcsNS44NC01Ljk1Niw4LjcxNg0KCQkJYy0wLjA0OSwwLjQ0OCwwLjIyLDEuMzM2LDAuNDU3LDIuMTIxYzAuNDE4LDEuMzgyLDAuOTM5LDMuMTAzLDAuNjMsNC45M2MtMC4zNzcsMi4yNDQtMS42NDEsNC42OTMtMi44NjIsNy4wNjINCgkJCWMtMC42OSwxLjMzOS0xLjM0MywyLjYwNC0xLjY2NSwzLjUyM2MtMC40MDgsMS4xNjMtMS40MDQsMi41LTMuMTMsNC43NjJjLTAuNjA3LDAuNzk1LTEuNDkxLDEuOTUzLTIuMDc5LDIuODE2DQoJCQljMC41NjgsMC40MjUsMS4zNTYsMC44OTMsMS45MTIsMS4yMjNjMS42ODQsMC45OTksMy41OTMsMi4xMzMsNC42ODUsMy45NjNjMC45OTYsMS42NzMsMC45MTEsMy4wNjQsMC42NjYsMy45MzgNCgkJCWMtMC40MTcsMS40OC0xLjQ3MSwyLjMzMy0yLjMzNywyLjg1OWMwLjA0MiwwLjE0NywwLjA4NCwwLjI5LDAuMTIsMC40MTZjMC40MTMsMS40MDcsMC44ODEsMy4wMDEsMC4zMjMsNC41MzENCgkJCWMtMC42NzEsMS44NTQtMi4yNjYsMi4zNjctMy4zNzMsMi41MTljMC4yNzEsMS4wMjcsMC45NjMsMi41MjMsMS4zMDgsMy4yNjljMC41ODIsMS4yNTgsMS4wNDIsMi4yNTIsMS4xNjUsMy4yMjENCgkJCWMwLjA0NywwLjQwOCwwLjA3MywwLjgzNywwLjA5OSwxLjNjMC4wNTksMS4wMjcsMC4xNTYsMi43NDUsMC42OTUsMy4xMjFjMC4wNjksMC4wNDgsMC4yOTgsMC4wNTQsMC4zOTMsMC4wNTQNCgkJCWMwLjM0OCwwLDAuNzg4LTAuMDYxLDEuMjU2LTAuMTI2YzAuNTg0LTAuMDgyLDEuMjQ3LTAuMTczLDEuOTQtMC4xNzNjMS4yNDEsMCwyLjI4OSwwLjI5MywzLjIwMiwwLjg5Nw0KCQkJYzIuMjMxLDEuNDg0LDMuMDM0LDQuMDM0LDMuNzQxLDYuMjg0YzAuNDI0LDEuMzQ2LDAuODk5LDIuODU5LDEuNTI1LDMuNDU0YzAuMTY3LTAuMDU0LDAuNDEyLTAuMTQ4LDAuNTkyLTAuMjE3DQoJCQljMC43MS0wLjI3MiwxLjU5NC0wLjYxMSwyLjY2Mi0wLjYxMWMwLjU4MiwwLDEuMTQ1LDAuMTAzLDEuNjc2LDAuMzA3YzEuODEyLDAuNjgyLDMuMDY4LDIuMjg3LDQuMTc4LDMuNzAxDQoJCQljMC42NDMsMC44MiwxLjQ0MiwxLjg0LDEuOTYyLDIuMTA0YzAuNzk5LDAuNDExLDIuMywxLjAwNywzLjg5LDEuNjM3YzYuMjk4LDIuNDk1LDEwLjg4Miw0LjQ3OSwxMi41MDksNy4yOTUNCgkJCWMxLjgzNywzLjE3OC0xLjU3LDYuNDQxLTcuMjE0LDExLjg0NmMtMS4zMDQsMS4yNDgtMy4wODksMi45NTctMy40NDYsMy40NzNjLTAuMzUzLDAuNTE3LTAuNTMzLDEuMTAxLTAuNzYzLDEuODQNCgkJCWMtMC40MTUsMS4zMzktMC45ODMsMy4xNzItMi44MDUsNC43NzhsLTAuMDkxLDAuMDc2Yy0wLjMwMSwwLjI0Ni0wLjc5NSwwLjY4My0xLjA0OCwwLjkwOGwtMi42MjksMy4xMzNsLTAuNTQxLTAuMjU2DQoJCQljLTAuMTMzLDAuOTYzLTAuMTg5LDIuMTgyLTAuMjIxLDIuODM4Yy0wLjA5MSwxLjk2Ny0wLjE0NywzLjE1NC0wLjk4Niw0LjE4NmMtMS44NDcsMi4yMzMtNC40ODgsMy42MjctNy4wNDQsNC45NzQNCgkJCWMtMS45MjUsMS4wMTYtMy45MTYsMi4wNjYtNC45ODUsMy4yNTFjLTAuMjI1LDAuMjc1LTEuMjgyLDEuODY3LTIuNTM2LDMuOTQ4bC0xLjM4MywyLjI5M2wtMi40NTYtMS4wNjUNCgkJCWMtMS42NjktMC43MjUtMy4yMTItMS4wOTItNC41ODgtMS4wOTJjLTUuODI1LDAtOC44ODksNy4xMDktMTAuNDM0LDEzLjA3NGwtMC40MjcsMS42NDlsLTEuNjI3LDAuNTA1DQoJCQljLTc0Ljg5MiwyMy4yNjgtMTUxLjQyOCw0NS4xNDYtMjI3LjQ4Myw2NS4wMjVjLTE1LjQ5OCw0LjA0OC0zMS40NDksOC4xMzQtNDcuNDEzLDEyLjE0NWMtMC4zOSwwLjA5Ni0xLjQ5NSwwLjM4LTIuOTY2LDAuNzU5DQoJCQlDNTEuNTQxLDM1Ny4yNTEsNTEuMjYxLDM1Ny4yNTEsNTAuNjQ4LDM1Ny4yNTF6IE04LjYzNCwxNzQuMDc3YzIuNzY5LDEwLjkzOSw1Ljc0NywyMi42NjIsOC43MzEsMzQuNDA5DQoJCQljNi42OTQsMjYuMzQ4LDEzLjYxNSw1My41OTIsMTguMDg2LDcxLjY3MmM0LjE2NCwxNi44MTQsOC4zMjUsMzMuNjM3LDEyLjQ4NCw1MC40NWwwLjk3NSwzLjk0DQoJCQljMC4xMjMsMC40ODQsMC41MjQsMi4xNDYsMS4wNDEsNC4yOTFjMC43MzksMy4wNjcsMi4wNDksOC41MDEsMi44NTksMTEuNzNjMy4wODgtMC43NTksOC4xMDgtMi4wNSwxMC42ODMtMi43MTINCgkJCWMxLjUwMS0wLjM4NiwyLjYyOS0wLjY3NiwzLjAxMi0wLjc3MWMxNS45MzItNC4wMDIsMzEuODY1LTguMDg0LDQ3LjM0My0xMi4xMjdjNzUuNDI3LTE5LjcxNiwxNTEuMzIyLTQxLjM5NiwyMjUuNjE4LTY0LjQ1Mg0KCQkJYzMuODgyLTEzLjE3LDEwLjczMy0xNiwxNS44OTktMTZjMS40NDcsMCwyLjk1NywwLjIyOSw0LjUwOSwwLjY4M2MwLjY5NC0xLjA5NCwxLjQ2NC0yLjI1MSwxLjkwOS0yLjc0NA0KCQkJYzEuNzk3LTEuOTk0LDQuMjc3LTMuMzAyLDYuNjc2LTQuNTY2YzEuNzY1LTAuOTMxLDMuNTgxLTEuODg5LDQuNzE1LTIuOTYyYzAuMDIyLTAuMzI0LDAuMDQxLTAuNzM0LDAuMDU3LTEuMDY5DQoJCQljMC4xMzUtMi44OCwwLjQwNy04LjczLDQuNzI1LTkuMjU2bDAuNTM0LTAuNTg5YzAsMCwwLjg2NC0wLjc3MiwxLjM2OC0xLjE4OGMwLjQ4NS0wLjQ0MywwLjY1Mi0wLjkzMywwLjk3NS0xLjk3Mg0KCQkJYzAuMzA1LTAuOTgxLDAuNjgzLTIuMjAyLDEuNTQ3LTMuNDY3YzAuNjUzLTAuOTY5LDEuOTgyLTIuMjU5LDQuMjc0LTQuNDU0YzEuNDUxLTEuMzg5LDMuODYtMy42OTYsNS4xMzMtNS4xOTQNCgkJCWMtMi4wNTYtMS4zMDMtNi4zNzgtMy4wMTYtOC40NDktMy44MzZjLTEuODEtMC43MTctMy4zNzEtMS4zMzYtNC40MjQtMS44NzljLTEuNzEyLTAuODctMi45MjItMi40MTQtMy45ODktMy43NzUNCgkJCWMtMC4zODItMC40ODctMC45MTMtMS4xNjUtMS4yOTUtMS41MzljLTAuMDczLDAuMDI3LTAuMTQ3LDAuMDU2LTAuMjEzLDAuMDgxYy0wLjczMiwwLjI4LTEuNzMzLDAuNjY0LTIuOTQxLDAuNjY0DQoJCQljLTEuMTQ1LDAtMi4yMTYtMC4zNDEtMy4xODUtMS4wMTRjLTIuNDE5LTEuNjc2LTMuMzA3LTQuNDk4LTQuMDIxLTYuNzY1Yy0wLjI5LTAuOTIzLTAuNzU3LTIuNDA2LTEuMTU4LTIuODk4DQoJCQljLTAuMjY4LDAuMDA2LTAuNjQ1LDAuMDU5LTEuMDQ0LDAuMTE0Yy0wLjYyMywwLjA4Ny0xLjMyOCwwLjE4NS0yLjEsMC4xODVjLTEuNTAxLDAtMi43NzItMC4zNzYtMy44ODgtMS4xNQ0KCQkJYy0yLjk4NS0yLjA4My0zLjE4OC01LjY2MS0zLjMxLTcuNzk4Yy0wLjAxNy0wLjI4Ny0wLjAzLTAuNTU2LTAuMDUzLTAuNzk1Yy0wLjA5Ny0wLjI5NC0wLjQxNy0wLjk4OC0wLjY1NS0xLjUwMw0KCQkJYy0xLjI5OC0yLjgwNS0zLjQ3LTcuNS0wLjQzMy0xMC41ODhjMC41MzQtMC41NDUsMS4xNDItMC44NTcsMS43MjMtMS4wMzdjLTAuNDU0LTEuNTkzLTAuODYtMy40NzQsMC4yODktNS4wOTcNCgkJCWMwLjMxMi0wLjQ1MywwLjcwMy0wLjc4OSwxLjA5Mi0xLjA1NGMtMC41MDktMC4zNTgtMS4xMjItMC43MjItMS42MzMtMS4wMjVjLTEuOTYyLTEuMTY1LTQuMTg1LTIuNDg0LTUuMTQtNC44NDkNCgkJCWMtMC45MzgtMi4yNjYsMC42NjItNC4zNjEsMy41NjUtOC4xNjZjMC44MDMtMS4wNTIsMi4wMTYtMi42NDIsMi4yNDgtMy4xNDZjMC40MzQtMS4yNDcsMS4xODItMi42OTYsMS45NzMtNC4yMw0KCQkJYzAuOTYtMS44NiwyLjA0Ny0zLjk2OSwyLjI2Ny01LjI3NGMwLjA2OS0wLjQxMy0wLjIyLTEuMzcxLTAuNDUyLTIuMTRjLTAuNDA3LTEuMzQ0LTAuODY4LTIuODY4LTAuNjg1LTQuNTUyDQoJCQljMC40Ny00LjM3LDMuNzEzLTguMTg3LDYuNTI5LTExLjE1NGMtMC43MTgtMS4wNDQtMS40Ny0xLjkwOS0xLjkxLTIuMTQxYy0wLjU0MS0wLjA1OS0xLjYxNiwwLjI1NC0yLjYwMywwLjU1Ng0KCQkJYy0xLjI3NCwwLjM5LTIuNzE5LDAuODMxLTQuMjUxLDAuODMxYy0wLjQ3NCwwLTAuOTM4LTAuMDQzLTEuMzc4LTAuMTI4Yy0xLjMtMC4yNjYtMi4xNjQtMS4wMjMtMi43MzQtMS42MTENCgkJCWMtMS4xMTksMC4zNTktMi41MDIsMC44MDUtMi41MDIsMC44MDVsLTAuOTI4LDAuMjk5bC0wLjkzLTAuMjkyYy0zLjAwMi0wLjk0NS05LjIxMS04LjYyLTEwLjExNC0xMC40OTQNCgkJCWMtMC42MzctMS4yODUtMS4wMDktMy40MDUtMS41NjEtNi43NTRjLTAuMjQ4LTEuNTAyLTAuNjIxLTMuNzY3LTAuOTcxLTUuMTI5Yy0yLjE5LTAuMjM1LTIuMjkzLTAuMjY1LTIuNzcxLTAuNTM0DQoJCQljLTEuNTc3LTAuODQzLTEuNjE3LTIuMzE3LTEuNTYxLTMuNDkxYy0wLjc4MywwLjEyMS0xLjc1NCwwLjQ0OC0yLjYzMSwwLjc0M2MtMS4zNzQsMC40NjMtMi42NzIsMC45LTMuOTg0LDAuOQ0KCQkJYy0wLjg5MywwLTEuNjk5LTAuMjA3LTIuMzk4LTAuNjE0Yy0xLjY5NC0xLjAwMi0yLjY5Ny0yLjc4NS0zLjY2Ny00LjUwOGMtMS4yMDItMi4xMzctMi4xMDctMy42LTMuMzkyLTQuMDEyDQoJCQljLTMuMTI4LDAuMzgyLTIwLjYxNCw2LjMzNC0yOC4xNjgsOC45MDVjLTMuNjI1LDEuMjM0LTYuNDg4LDIuMjA4LTcuNzUzLDIuNTk5Yy01NS42NjUsMTcuMTYtMTEyLjQxNCwzMy41NjUtMTY4LjY2OSw0OC43NTgNCgkJCWMtMTQuNjQsMy45NTItMjguOTEzLDcuNzM4LTQyLjQyMiwxMS4yNTRjLTAuNDUxLDAuMTE4LTEuNTc2LDAuNTEyLTIuNzY3LDAuOTNjLTQuNjg2LDEuNjQzLTguNzY4LDMuMDAzLTExLjI2NSwzLjAwMw0KCQkJYy0wLjkwNywwLTEuNjY4LTAuMTcxLTIuMzE5LTAuNTIzYy0xLjIzMi0wLjYwOC0xLjI3MS0wLjc0NS0zLjM0Ni04LjA1NmMtMC43MjgtMi41NjQtMS42MjUtNS43NTgtMi42MDQtOS4yNjENCgkJCWMtNS4xNjYsNS4xNTUtMTEuMjU3LDEwLjk1OC0xNS40OTMsMTMuMTM0Yy0wLjA5OSwwLjA1MS0wLjIxMSwwLjEwMy0wLjM0LDAuMTZjLTAuMTk5LDAuMDg4LTAuNSwwLjIyMi0xLjE4NSwxLjAwNQ0KCQkJYy0xLjcxNCwxLjk3OS0zLjYwMywzLjY4My01LjQzLDUuMzMxYy0xLjY1NiwxLjQ5NS0zLjIyLDIuOTA3LTQuNjA0LDQuNDY0Yy0xLjQ1NiwxLjYxMS0zLjI0MywyLjQ1Ni00LjgyLDMuMjAyDQoJCQljLTAuNjI3LDAuMjk2LTEuMjE5LDAuNTc2LTEuNzE1LDAuODcxQzkuMDMzLDE3My44MjgsOC44MzUsMTczLjk1MSw4LjYzNCwxNzQuMDc3eiIvPg0KCTwvZz4NCgk8Zz4NCgkJPHBhdGggZmlsbD0iI0Y2QjgxMCIgZD0iTTE4MC43NjYsMTUwLjcyOWw4LjExMS0yLjE4MmMzLjUyNy0wLjk0OSw3LjI5Ny0wLjk5NywxMC42ODksMC44MjljMy4zOSwxLjgzMyw2LjMyMSw1LjU1MSw4LjAxNiwxMS44Ng0KCQkJYzEuNjkyLDYuMzEsMS4wMDQsMTAuOTE5LTEuMDE1LDE0LjIwNWMtMi4wMiwzLjI4LTUuMjY3LDUuMjc5LTguNzk0LDYuMjI3bDUuOTMsMjIuMDc4bC04LjEwOSwyLjE3OEwxODAuNzY2LDE1MC43Mjl6DQoJCQkgTTE5NS41NTIsMTczLjQwMWMyLjQ3OS0wLjY2MywzLjkzNi0xLjUzOSw0LjQ5LTMuMDU1YzAuNTc4LTEuNDQ1LDAuMjY0LTMuNTMxLTAuNTY1LTYuNjEyYy0wLjgyOS0zLjA3OS0xLjY0MS01LjE5NS0yLjkwMy02LjMwNQ0KCQkJYy0xLjI2NS0xLjExMy0zLjAwNC0xLjI4Ni01LjQ4LTAuNjIzTDE5NS41NTIsMTczLjQwMXoiLz4NCgkJPHBhdGggZmlsbD0iI0Y2QjgxMCIgZD0iTTIxNy44MTksMTk5Ljk1M2wtNi40OTMtNTcuNDM2bDkuOTExLTIuNjYzbDIzLjE2Nyw1Mi45NTdsLTcuODg2LDIuMTE2bC00LjUzLTEwLjg1N2wtNy44MDksMi4wOTgNCgkJCWwxLjUyNSwxMS42NjdMMjE3LjgxOSwxOTkuOTUzeiBNMjIxLjU1NSwxNTkuMDExbC0wLjYxLTEuMzY4bC0wLjQ0OCwwLjEyM2wwLjE1NywxLjQ4OGwyLjM1MSwxOC4wNTNsNS41NjItMS40OTNMMjIxLjU1NSwxNTkuMDExDQoJCQl6Ii8+DQoJPC9nPg0KCTxnPg0KCQk8cGF0aCBmaWxsPSIjMDA1QThEIiBkPSJNMTEzLjAxMSwyMjguMTFsLTE0LjgzLTU1LjE5OWw2LjM4NS0xLjcxNmM3LjUxMi0yLjAxOSwxMS45NzEtMS42MDcsMTUuMjc2LDIuMDE0DQoJCQljMy4yMzMsMy42NDEsNS4zOSwxMC40NzEsOC4yOTYsMjEuMjg0YzIuOTA1LDEwLjgxNiw0LjQ0LDE3LjczLDMuNDY0LDIyLjQ5OGMtMS4wNDcsNC43OTItNC42OTUsNy4zODMtMTIuMjA4LDkuMzk5DQoJCQlMMTEzLjAxMSwyMjguMTF6IE0xMTguOTM5LDIxNy44MTRjMi43OC0wLjc0NSw0LjI3OS0xLjQ2Nyw0LjM3Ny00LjM5MWMwLjAzMy0xLjM3OS0wLjE4OS0zLjQxNC0wLjgxOC02LjA2MQ0KCQkJYy0wLjYzNy0yLjY1MS0xLjU4My02LjE4LTIuNzkyLTEwLjY4NWMtMS4yMTQtNC41MDctMi4xNTktOC4wMzYtMi45MzgtMTAuNjQ0Yy0wLjc2NC0yLjUzNS0xLjU4Ni00LjQwNS0yLjMyOC01LjY1Nw0KCQkJYy0xLjUzNS0yLjQwNC0zLjE5Mi0yLjI4NC01Ljk2OC0xLjUzNkwxMTguOTM5LDIxNy44MTR6Ii8+DQoJCTxwYXRoIGZpbGw9IiMwMDVBOEQiIGQ9Ik0xNTUuNDU4LDIxNi43MDVsLTEwLjQ2LTIyLjE1M2wtMi4xNzcsMC41ODZsNi4yNTQsMjMuMjgybC04LjExNCwyLjE3N2wtMTQuODI5LTU1LjE5Nmw4LjExNC0yLjE4DQoJCQljOS42OTItMi42MDEsMTUuMjksMS43NzIsMTguMDk1LDEyLjIwOWMxLjQ3Myw1LjQ4LDEuMzc5LDEwLjgyLTEuMTM0LDEzLjc1M2wxMi4zNjIsMjUuMzQyTDE1NS40NTgsMjE2LjcwNXogTTE0MC44MDIsMTg3LjYyNw0KCQkJYzEuMTI3LTAuMzAxLDIuNTg5LTAuODU3LDMuNTA4LTIuMjI4YzAuOTE4LTEuMzc2LDEuMzQ5LTMuNjYzLDAuMjk5LTcuNTcyYy0xLjA1LTMuOTAxLTIuNTktNS43NDItNC4wNzUtNi40NzUNCgkJCWMtMS40ODEtMC43MjgtMy4wMDMtMC4zOTYtNC4xMjktMC4wOTZMMTQwLjgwMiwxODcuNjI3eiIvPg0KCQk8cGF0aCBmaWxsPSIjMDA1QThEIiBkPSJNMTc0LjgxNSwxNTIuMzI1bDExLjc4MSw0My44NTZjMC41MjgsMi4yNzMsMC42MjQsNC40MjIsMC4yNjQsNi4zNzFjLTAuMjc0LDEuNjg2LTAuOTQyLDMuMzkxLTIuMTQsNC45MjENCgkJCWMtMS4xODIsMS42MDUtMy4wMjcsMi44MjgtNS43MzEsMy41NTRjLTIuNzAyLDAuNzMtNC45ODYsMC42MTQtNi44MTItMC4xODRjLTEuODA2LTAuNzI0LTMuMTY1LTEuODg3LTQuMjQxLTMuMjA3DQoJCQljLTEuMjkyLTEuNTA1LTIuMjg5LTMuNDEtMi45NjYtNS42NDVsLTExLjc4Mi00My44NTZsOC4xMS0yLjE4bDExLjc4NCw0My44NThjMC40MjEsMS41NzgsMS4wODEsMi41MjYsMi4wNTQsMy4xNTQNCgkJCWMwLjQ3OCwwLjI3NSwxLjA2MiwwLjM1NCwxLjczNywwLjE3M2MxLjQyOC0wLjM4NSwxLjg1OC0xLjQ2NSwxLjg2LTIuNjc0YzAuMDg0LTAuNTg0LTAuMDI1LTEuMjgyLTAuMjQ3LTIuMTA4bC0xMS43ODEtNDMuODU0DQoJCQlMMTc0LjgxNSwxNTIuMzI1eiIvPg0KCQk8cGF0aCBmaWxsPSIjMDA1QThEIiBkPSJNMjM1LjMxNSwxMzYuMDczbDguMTExLTIuMTgxbDEyLjgxMSw0Ny42ODlsMTAuNzM5LTIuODg1bDIuMDE3LDcuNTA4bC0xOC44NSw1LjA2M0wyMzUuMzE1LDEzNi4wNzN6Ii8+DQoJCTxwYXRoIGZpbGw9IiMwMDVBOEQiIGQ9Ik0xNTcuNDA1LDI3My4yNzdsMi44MzIsMTAuNTU3YzAuNzM4LDMuMTU2LDAuODY5LDYuMTQ4LDAuMzYzLDguODYxYy0wLjM3OSwyLjM0Mi0xLjMwOCw0LjcxNS0yLjk3Nyw2Ljg0NQ0KCQkJYy0xLjY0MiwyLjIzMy00LjIwOCwzLjkzMi03Ljk2Nyw0Ljk0Yy0zLjc2MywxLjAxMS02LjkzOCwwLjg1Ni05LjQ4LTAuMjU0Yy0yLjUwOS0xLjAwNi00LjQtMi42MjItNS45MDEtNC40NjENCgkJCWMtMS43OTctMi4wOS0zLjE4MS00Ljc0OC00LjEyNS03Ljg1bC0xMi4xNTMtNDUuMjM2Yy0wLjcxMS0zLjA2Mi0wLjg0My02LjA0OC0wLjMzOC04Ljc2MmMwLjM4Mi0yLjM0LDEuMTc1LTQuNzkzLDIuODQzLTYuOTIzDQoJCQljMS42NzItMi4xMyw0LjMxNi0zLjk2MSw4LjA3OC00Ljk3NmMzLjc2MS0xLjAwNyw2Ljg1Ny0wLjcxNiw5LjM3MiwwLjI4OGMyLjUxMSwxLjAwNiw0LjUzLDIuNzA0LDYuMDM1LDQuNTM4DQoJCQljMS43OTcsMi4wOTYsMy4xOCw0Ljc0Niw0LjA5Nyw3Ljc1MWwyLjgzMywxMC41NWwtMTAuNTUxLDIuODMybC0yLjgzMy0xMC41NDdjLTAuNTYxLTIuMDkxLTEuNDc4LTMuNDE0LTIuOTY0LTQuMzU0DQoJCQljLTAuNjYyLTAuMzg1LTEuNjg1LTAuNDQ2LTIuODM0LTAuMTRjLTEuOTg3LDAuNTM3LTIuNTMzLDIuMjUtMi42OTUsMy43NDdjLTAuMDg4LDAuOTIzLDAuMDY1LDEuODkyLDAuMjQsMi45NjVsMTIuMTUyLDQ1LjIzNA0KCQkJYzAuNjk0LDIuMTY4LDEuNzEsMy40NTksMy4wNjUsNC4zMjVjMC42NjYsMC4zODQsMS40NzgsMC41MDEsMi40MTksMC4yNDhjMi40MDMtMC42NDMsMy4wMDctMi4xNTEsMy4xMDgtMy44NjENCgkJCWMwLjExMy0wLjgxNS0wLjAzMi0xLjc4LTAuMzM4LTIuOTI5bC0yLjgzOC0xMC41NTNMMTU3LjQwNSwyNzMuMjc3eiIvPg0KCQk8cGF0aCBmaWxsPSIjMDA1QThEIiBkPSJNMTY4LjE0OCwyOTguNjE2bC05LjAzLTc5Ljg5NmwxMy43ODktMy43MDNsMzIuMjIzLDczLjY2N2wtMTAuOTY0LDIuOTQ2bC02LjMwNC0xNS4xMDhMMTc3LDI3OS40NA0KCQkJbDIuMTIxLDE2LjIzMkwxNjguMTQ4LDI5OC42MTZ6IE0xNzMuMzQ3LDI0MS42NjZsLTAuODQ3LTEuOTAzbC0wLjYzLDAuMTdsMC4yMjUsMi4wNjdsMy4yNjksMjUuMTE1bDcuNzMyLTIuMDc5TDE3My4zNDcsMjQxLjY2NnoNCgkJCSIvPg0KCQk8cGF0aCBmaWxsPSIjMDA1QThEIiBkPSJNMjI5LjA3MSwyODIuMjU0bC0yMC4xNzItNDYuMzI5bC0xLjI4NC0zLjEyNWwtMC42MjYsMC4xN2wxMy44MzQsNTEuNDk5bC0xMC40NDksMi44MDhsLTIwLjYyOC03Ni43OA0KCQkJbDEzLjc5MS0zLjcwOGwxNi4xMTcsMzMuMzA2bDEuNjE3LDMuOTM1bDAuMjA4LTAuMDU0bC0wLjU3LTQuMjE4bC0yLjc0MS0zNi44OTZsMTMuNzg3LTMuNzA1bDIwLjYyNSw3Ni43ODJsLTEwLjQ0MywyLjgwNg0KCQkJbC0xMy44MzItNTEuNWwtMC42MzUsMC4xNzFsMC40NTUsMy4zNDRsNS43NTMsNTAuMjAyTDIyOS4wNzEsMjgyLjI1NHoiLz4NCgkJPHBhdGggZmlsbD0iIzAwNUE4RCIgZD0iTTI0MC4zNDQsMTk2Ljg5OWwxMS4yNzgtMy4wMjhjNC45MTEtMS4zMTgsMTAuMTU4LTEuMzg3LDE0Ljg3MSwxLjE0OQ0KCQkJYzQuNzE4LDIuNTQ3LDguNzk0LDcuNzIzLDExLjE1MSwxNi40OThjMi4zNjIsOC43NzksMS4zOTYsMTUuMTkyLTEuNDEyLDE5Ljc2MWMtMi44MDUsNC41NjQtNy4zMjEsNy4zNDMtMTIuMjM1LDguNjYzDQoJCQlsOC4yNTEsMzAuNzA5bC0xMS4yODEsMy4wMzFMMjQwLjM0NCwxOTYuODk5eiBNMjYwLjkwOSwyMjguNDQ4YzMuNDUxLTAuOTI3LDUuNDc4LTIuMTQ1LDYuMjUtNC4yNTQNCgkJCWMwLjgwOS0yLjAwOSwwLjM2NS00LjkxLTAuNzgzLTkuMTk0Yy0xLjE1NC00LjI4MS0yLjI4Ni03LjIzMS00LjA0My04Ljc3NWMtMS43NTUtMS41NDctNC4xNzMtMS43OS03LjYyNS0wLjg2M0wyNjAuOTA5LDIyOC40NDh6DQoJCQkiLz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==') no-repeat center center;
+  background-size: 100%;
+  padding-top: 55%;
+  display: block;
+  overflow: hidden;
+}
+@media (min-width: 15em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000349}}
+  .site-name__logo a {
+    width: 55%;
+  }
+}
+@media (min-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000349}}
+  .site-name__logo a {
+    float: left;
+    width: 30%;
+    margin: -10% 1em 0 0;
+    padding-top: 30%;
+  }
+}
+@media (min-width: 58em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000349}}
+  .site-name__logo a {
+    width: 280px;
+    margin-top: -5em;
+    padding-top: 17em;
+    -moz-transform: translate(-1em, 0);
+    -ms-transform: translate(-1em, 0);
+    -webkit-transform: translate(-1em, 0);
+    transform: translate(-1em, 0);
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000379}}
+.no-svg .site-name__logo a {
+  background-image: url('../images/drupalcamppa_logo.png');
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000383}}
+.site-name__logo a img {
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000388}}
+.site-name__name {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  line-height: 80%;
+}
+@media (min-width: 15em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000388}}
+  .site-name__name {
+    font-size: 8vw;
+  }
+}
+@media (min-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000388}}
+  .site-name__name {
+    text-align: left;
+    font-size: 6.5vw;
+  }
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000388}}
+  .site-name__name {
+    font-size: 30px;
+    font-size: 6.5vw;
+  }
+}
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000388}}
+  .site-name__name {
+    font-size: 44px;
+    font-size: 6.5vw;
+  }
+}
+@media (min-width: 58em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\0000388}}
+  .site-name__name {
+    font-size: 56px;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\00003117}}
+.site-name__name a {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\00003121}}
+.site-name__name span {
+  display: block;
+  color: #f4b830;
+}
+@media (min-width: 15em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\00003121}}
+  .site-name__name span {
+    font-size: 0.7em;
+    display: block;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\00003131}}
+.site-name__dates {
+  font-size: 16px;
+  font-size: 6vw;
+  line-height: 100%;
+  text-align: center;
+  margin-top: 2%;
+  color: #2d241c;
+}
+@media (min-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\00003131}}
+  .site-name__dates {
+    text-align: left;
+    font-size: 24px;
+    font-size: 3.5vw;
+  }
+}
+@media (min-width: 58em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_sitename\.scss}line{font-family:\00003131}}
+  .site-name__dates {
+    font-size: 26px;
+    margin-top: 0.65em;
+    margin-bottom: 0.65em;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\000031}}
+.venue {
+  padding: 0 1em;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\000031}}
+  .venue {
+    padding: 0;
+    margin-left: -0.3em;
+    margin-right: -0.3em;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -ms-box-align: stretch;
+    box-align: stretch;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-box-direction: reverse;
+    box-direction: reverse;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 40em) and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\000031}}
+  .venue {
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+  }
+}
+@media (min-width: 40em) and (min-width: 60em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\000031}}
+  .venue {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\0000316}}
+.venue .venue__info {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1.625em;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\0000316}}
+  .venue .venue__info {
+    margin: 0;
+    width: 50%;
+    padding: 0 2em;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\0000325}}
+  .venue .venue__info .no-flexbox {
+    float: right;
+  }
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\0000331}}
+  .venue .venue__map {
+    margin: 0;
+    margin-top: -2em;
+    width: 50%;
+    position: relative;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\0000338}}
+  .venue .venue__map .no-flexbox {
+    float: right;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\0000343}}
+.venue .venue__map .iframe-container {
+  padding-bottom: 65%;
+  padding-top: 25px;
+  height: 0;
+  position: relative;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\0000343}}
+  .venue .venue__map .iframe-container {
+    padding-bottom: 35em;
+    position: static;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_venue_info\.scss}line{font-family:\0000353}}
+.venue .venue__map .iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_view-cod-sponsors\.scss}line{font-family:\000033}}
+.view-cod-sponsors .title {
+  border-bottom: 2px solid;
+  text-align: center;
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_view-cod-sponsors\.scss}line{font-family:\000039}}
+.view-cod-sponsors .logos {
+  clear: both;
+  max-width: 50em;
+  margin: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_view-cod-sponsors\.scss}line{font-family:\0000315}}
+.view-cod-sponsors .logo {
+  width: 80%;
+  height: 10em;
+  height: 50vw;
+  max-height: 10em;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  margin-top: 1.625em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.625em;
+}
+@media (min-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_view-cod-sponsors\.scss}line{font-family:\0000315}}
+  .view-cod-sponsors .logo {
+    width: 25%;
+    float: left;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_view-cod-sponsors\.scss}line{font-family:\0000332}}
+.view-cod-sponsors .logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+@media (min-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_view-cod-sponsors\.scss}line{font-family:\0000346}}
+  .view-cod-sponsors .Platinum .logo {
+    width: 50%;
+  }
+}
+@media (min-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_view-cod-sponsors\.scss}line{font-family:\0000352}}
+  .view-cod-sponsors .Gold .logo {
+    width: 33.33%;
+    max-height: 8em;
+  }
+}
+@media (min-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_view-cod-sponsors\.scss}line{font-family:\0000359}}
+  .view-cod-sponsors .Silver .logo {
+    width: 25%;
+    max-height: 6em;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/modules\/_what-this-about\.scss}line{font-family:\000032}}
+.what-this-about p {
+  color: #f4b830;
+}
+
+@media (min-width: 0) and (max-width: 35em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/states\/_primary-nav\.scss}line{font-family:\000032}}
+  #menu .menu-block-wrapper {
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -moz-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/states\/_primary-nav\.scss}line{font-family:\0000310}}
+#menu.open .menu-block-wrapper {
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/states\/_primary-nav\.scss}line{font-family:\0000314}}
+#menu.open:after {
+  -moz-transition-property: color, background-color;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  color: #f4b830;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_background\.scss}line{font-family:\000031}}
+#main .block {
+  background: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_footer\.scss}line{font-family:\000031}}
+#footer {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  clear: both;
+  background: #16120d;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_footer\.scss}line{font-family:\000031}}
+  #footer {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+@media (min-width: 60em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_footer\.scss}line{font-family:\000031}}
+  #footer {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_footer\.scss}line{font-family:\000039}}
+#footer:before {
+  content: '';
+  display: block;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-top-color: white;
+  border-width: 2em 2.5em 0 2.5em;
+  position: absolute;
+  bottom: -1.9em;
+  top: -2px;
+  right: 25%;
+  z-index: 100;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_footer\.scss}line{font-family:\0000320}}
+#footer .block {
+  margin-top: 0.8125em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.8125em;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_footer\.scss}line{font-family:\0000326}}
+#footer .block header h2 {
+  text-align: center;
+  color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_header\.scss}line{font-family:\000031}}
+#header {
+  padding: 3em 0 2em;
+  background: black url('../images/bg-dcamppa.jpg') no-repeat center -6.5em fixed;
+  display: block;
+  overflow: hidden;
+}
+@media (min-width: 58em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_header\.scss}line{font-family:\000031}}
+  #header {
+    background-size: cover;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-prefix\.scss}line{font-family:\000031}}
+#main-prefix {
+  position: relative;
+  background-color: #5b4e42;
+  padding: 2em;
+}
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-prefix\.scss}line{font-family:\000031}}
+  #main-prefix {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -ms-box-align: stretch;
+    box-align: stretch;
+    -webkit-align-content: center;
+    align-content: center;
+    display: flex;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-prefix\.scss}line{font-family:\0000313}}
+#main-prefix:after {
+  content: '';
+  display: block;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-top-color: #5b4e42;
+  border-width: 2em 2.5em 0 2.5em;
+  position: absolute;
+  bottom: -1.9em;
+  right: 50%;
+  margin-right: -2.5em;
+  z-index: 100;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-prefix\.scss}line{font-family:\0000324}}
+#main-prefix .block {
+  max-width: 600px;
+  margin: auto;
+  padding: 5%;
+}
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-prefix\.scss}line{font-family:\0000324}}
+  #main-prefix .block {
+    width: 50%;
+    margin: 0 auto;
+    max-width: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-prefix\.scss}line{font-family:\0000333}}
+  #main-prefix .block .no-flexbox {
+    float: left;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-prefix\.scss}line{font-family:\0000339}}
+#main-prefix .block header h2 {
+  margin-top: 0;
+  color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-suffix\.scss}line{font-family:\000032}}
+#main-suffix .block {
+  background: white;
+  display: block;
+  overflow: hidden;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-suffix\.scss}line{font-family:\000032}}
+  #main-suffix .block {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+@media (min-width: 60em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-suffix\.scss}line{font-family:\000032}}
+  #main-suffix .block {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main-suffix\.scss}line{font-family:\000038}}
+#main-suffix .block header h2 {
+  padding-top: 0;
+  border-bottom: 3px solid #1f79bc;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main\.scss}line{font-family:\000031}}
+#main {
+  background: white;
+  padding: 0;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  padding: 2em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  position: relative;
+  padding-bottom: 8%;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main\.scss}line{font-family:\000031}}
+  #main {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+@media (min-width: 60em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main\.scss}line{font-family:\000031}}
+  #main {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main\.scss}line{font-family:\0000327}}
+#main .wrapper {
+  max-width: 50em;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main\.scss}line{font-family:\0000331}}
+.front #main .wrapper {
+  max-width: none;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/layouts\/_main\.scss}line{font-family:\0000336}}
+  .front #main {
+    padding-bottom: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/views\/_news-block\.scss}line{font-family:\000032}}
+.view-recent-news .node-news {
+  margin-bottom: 2em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/pages\/_session\.scss}line{font-family:\000034}}
+.page-node-add-session #field-speakers-add-more-wrapper .tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/pages\/_sponsorship-page\.scss}line{font-family:\000032}}
+  #node-13 p.first {
+    padding-top: 2%;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/pages\/_sponsorship-page\.scss}line{font-family:\000038}}
+#node-13 .sponsor-badge {
+  margin: auto;
+  display: block;
+  text-align: center;
+  max-width: 300px;
+  width: 80%;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/pages\/_sponsorship-page\.scss}line{font-family:\000038}}
+  #node-13 .sponsor-badge {
+    float: right;
+    margin-left: 1em;
+  }
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelpotter\/Documents\/Websites\/drupalcamppa\/sites\/all\/themes\/custom\/drupalcamppa_aurora\/sass\/partials\/pages\/_sponsorship-page\.scss}line{font-family:\0000320}}
+  #node-13 .sponsor-table {
+    margin-top: 1.625em;
+  }
+}

@@ -1,0 +1,145 @@
+<?php
+
+/**
+ * @file
+ * Syleguide Content Types module file
+ *
+ * Impliments hook_menu, hook_styleguide and
+ * hook_theme functions to print out content types
+ * to the Styleguide page.
+ */
+
+/**
+ * Impliments hook_menu
+ *
+ * Admin Page
+ */
+function styleguide_ct_menu() {
+  $items['admin/config/user-interface/styleguide-ct'] = array(
+    'title' => 'Styleguide Content Types',
+    'description' => 'Settings for the content types within the stylguide.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('styleguide_ct_admin'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'styleguide_ct_admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Impliments hook_styleguide
+ *
+ * Add items to the styleguide module
+ */
+function styleguide_ct_styleguide() {
+  $items = array();
+  // Get a list of all content types to display
+  $contenttype = variable_get('styleguide_ct_enabled');
+  ksort($contenttype);
+  $viewmodes = variable_get('styleguide_ct_viewmodes');
+
+  // Foreach content type
+  foreach ($contenttype as $key => $type) {
+    // Make sure that type is defined from the styleguide settings
+    if ($type) {
+      // Get an example node from this content type
+      $node = _get_example_node($type);
+      // If an example node obj was returned
+      if ($node) {
+        // Add this content type to the output of the styleguide module
+        // and print the example node in each of the viewmodes
+        $items[$type] = array(
+          'title' => t($type),
+          'content' => theme('styleduide_components', array('node' => $node, 'viewmodes' => $viewmodes)),
+          'group' => t('Content Types'),
+        );
+      } else {
+        $items[$type] = array(
+          'title' => t($type),
+          'content' => '<em>There are currently no example nodes of this content type.</em>',
+          'group' => t('Content Types'),
+        );
+      }
+    }
+  }
+  return $items;
+}
+
+/**
+ * Impliments hook_theme
+ *
+ * Establish our theme item
+ */
+function styleguide_ct_theme() {
+  return array(
+    'styleduide_components' => array(),
+  );
+}
+
+/**
+ * Impliments the theme() function
+ *
+ * Output an example node in every viewmode that we
+ * have available to our content types.
+ */
+function theme_styleduide_components($variables) {
+  $output = '';
+  $node = $variables['node'];
+  $viewmodes = $variables['viewmodes'];
+
+  // If there is a node example
+  if ($variables['node']) {
+    // Loop through the viewmodes
+    foreach ($viewmodes as $name => $viewmode) {
+      // If the viewmode is enabled
+      if ($viewmode) {
+        // Get the render array of the node for the specific viewmode
+        $node_view = node_view($node, $name);
+
+        $output .= '<label>';
+        $output .= $name;
+        $output .= '</label>';
+        $output .= drupal_render($node_view);
+      }
+    }
+  }
+
+  return $output;
+}
+
+/**
+ * Get a list of viewmodes for nodes
+ * @return array  An array a view modes
+ */
+function _get_view_modes() {
+  $entitynode = entity_get_info('node');
+
+  return $entitynode['view modes'];
+}
+
+/**
+ * Get an example node from a nodetype
+ * @param  string $nodetype Node type machine name
+ * @return obj Ouputs an example node
+ */
+function _get_example_node($nodetype) {
+  $examplenode = '';
+
+  // Get 1 node row from the $nodetype
+  $query = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->condition('n.type', $nodetype)
+    ->range(0, 1);
+    $results = $query->execute();
+
+  foreach ($results as $key => $result) {
+    // Get the nid of the result
+    $nid = $result->nid;
+
+    // Load the node object from the nid
+    $examplenode = node_load($nid);
+  }
+  return $examplenode;
+}

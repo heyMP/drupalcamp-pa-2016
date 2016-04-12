@@ -1,0 +1,131 @@
+<?php
+/**
+ * @file
+ * Code for the BrowserSync module.
+ */
+
+/**
+ * Implements hook_permission().
+ *
+ * Ensures the user has permission to use BrowserSync.
+ */
+function browsersync_permission() {
+  return array(
+    'use browsersync' => array(
+      'title' => t('Use BrowserSync'),
+      'description' => t('BrowserSync script will only be included for these users.'),
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function browsersync_theme($existing, $type, $theme, $path) {
+  return array(
+    'browsersync_snippet' => array(
+      'variables' => array(
+        'socket_address' => NULL,
+        'socket_port' => NULL,
+        'client_port' => NULL,
+        'client_path' => NULL,
+        'version' => NULL,
+      ),
+      'file' => 'browsersync.theme.inc',
+      'path' => $path . '/theme',
+      'template' => 'browsersync-snippet',
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_css_alter().
+ *
+ * BrowserSync does not work with CSS import so we need to force Drupal to embed
+ * CSS files as <link> elements.
+ *
+ * @see https://github.com/shakyShane/browser-sync/issues/10
+ */
+function browsersync_css_alter(&$css) {
+  if (browsersync_is_active() && !variable_get('preprocess_css')) {
+    foreach ($css as $key => $value) {
+      // Skip core files.
+      $is_core = (strpos($value['data'], 'misc/') === 0 || strpos($value['data'], 'modules/') === 0);
+      if (!$is_core && file_exists($value['data'])) {
+        $css[$key]['preprocess'] = FALSE;
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_page_build().
+ *
+ * We are using this hook to add the BrowserSync snippet to the bottom of the
+ * page.
+ */
+function browsersync_page_build(&$page) {
+  $page['page_bottom']['browsersync'] = array(
+    '#markup' => browsersync_get_snippet(),
+    '#weight' => variable_get('browsersync_snippet_weight', 100),
+    '#access' => browsersync_is_active(),
+  );
+}
+
+
+/**
+ * Returns whether BrowserSync is enabled for a given path.
+ *
+ * @param string $path
+ *   (optional) The path to check (defaults to the current path).
+ *
+ * @return bool
+ *   TRUE or FALSE, depending on whether BrowserSync is enabled.
+ */
+function browsersync_is_enabled($path = '') {
+  // Define a fallback for the path.
+  if ($path == '') {
+    $path = current_path();
+  }
+
+  // Determine whether BrowserSync is enabled.
+  if (path_is_admin($path)) {
+    $status = variable_get('browsersync_enabled_for_admin', FALSE);
+  }
+  else {
+    $status = variable_get('browsersync_enabled_for_nonadmin', FALSE);
+  }
+
+  return $status;
+}
+
+
+/**
+ * Determines access for the use of BrowserSync.
+ *
+ * @param string $path
+ *   (optional) The path to check (defaults to the current path).
+ *
+ * @return bool
+ *   TRUE or FALSE, depending on whether BrowserSync is active.
+ */
+function browsersync_is_active($path = '') {
+  return user_access('use browsersync') && browsersync_is_enabled($path);
+}
+
+
+/**
+ * Returns a snippet as required by BrowserSync.
+ */
+function browsersync_get_snippet() {
+  return theme('browsersync_snippet', array(
+    'socket_address' => variable_get('browsersync_socket_address', 'HOST'),
+    'socket_port' => variable_get('browsersync_socket_port', '3000'),
+    'client_port' => variable_get('browsersync_client_port'),
+    'client_path' => variable_get('browsersync_client_path', '/browser-sync'),
+    'version' => variable_get('browsersync_version'),
+  ));
+}

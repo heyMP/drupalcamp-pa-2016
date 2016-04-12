@@ -1,0 +1,12 @@
+name = "Quo JS"
+description = "Makes the quo.js library available to drupal"
+core = 7.x
+package = "User Interface"
+dependencies[] = libraries
+
+; Information added by drupal.org packaging script on 2012-11-14
+version = "7.x-1.0-beta1"
+core = "7.x"
+project = "quojs"
+datestamp = "1352927583"
+

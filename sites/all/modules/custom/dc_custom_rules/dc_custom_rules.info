@@ -1,0 +1,6 @@
+name = Custom Rules
+description = TODO: Description of module
+dependencies[] = rules
+package = rules
+core = 7.x
+files[] = tests/dc_custom_rules.test

@@ -1,0 +1,12 @@
+name = BrowserSync
+description = Integrates the BrowserSync (Node.js module) with Drupal.
+core = 7.x
+package = "Nodejs"
+project = browsersync
+
+; Information added by Drupal.org packaging script on 2014-11-18
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "browsersync"
+datestamp = "1416287886"
+

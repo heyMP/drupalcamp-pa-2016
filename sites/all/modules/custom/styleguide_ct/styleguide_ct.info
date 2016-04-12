@@ -1,0 +1,4 @@
+name = Styleguide Content Types
+description = List Content Types in the Styleguide
+core = 7.x
+dependencies[] = styleguide

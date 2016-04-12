@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function dcviewmodes_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['highlight_item'] = array(
+    'label' => 'Highlight Item',
+    'custom settings' => FALSE,
+  );
+}

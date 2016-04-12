@@ -1,0 +1,56 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the standard installation profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+
+
+function security_update_install() {
+
+// Limit account creation to administrators only.
+  variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
+  
+ //Turn off email verification  
+  variable_set('user_email_verification', '0');
+
+//Set auto password generation in password handling  
+   variable_set('genpass_mode', '2');
+
+//Set login security time track to 24 hours. There are manual settings in loginsecurity?  
+    variable_set('login_security_track_time', '24');
+ 
+ //Set the login expiration in password policy to allow users to change not just block   
+	variable_set('password_policy_block', '1');
+//Set error not to display	
+	variable_set('error_level', '0');
+	
+//Set session limit to log out old session
+	variable_set('session_limit_behaviour', '1');
+
+
+//create default password policy this is not enabled and will need to be completed and enabled manually prior to use
+$query = db_query("INSERT INTO {password_policy} (pid, name, expiration, warning) VALUES (1, 'default profile', 180, '15,5,1')");
+if (is_array($passowrd_policy))
+    {
+		foreach ($password_policy as $password_policy) {
+			password_policy_save($passowrd_policy);
+		}
+
+$query = db_query("INSERT INTO {password_policy_role} (pid, rid) VALUES (1, 2)");
+		foreach ($password_policy_role as $password_policy_role) {
+			password_policy_role_save($password_policy_role);
+		}
+    }
+
+
+}
+
+

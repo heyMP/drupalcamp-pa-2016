@@ -1,0 +1,100 @@
+#menu {
+  background: transparent;
+  display: block;
+  position: relative;
+
+  &:after {
+    @include transition-duration(.5s);
+    @extend .pathway-gothic;
+    content: 'menu';
+    display: block;
+    @extend .button--list-menu;
+    color: white;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    background-color: $black;
+    padding: .5em 1em;
+    font-size: 18px;
+    @include breakpoint($primary-nav--inline) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .menu-block-wrapper {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    background: $black;
+    @include breakpoint(0 $primary-nav--inline) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 1000;
+      overflow-y: scroll;
+    }
+    @include breakpoint($primary-nav--inline) {
+      @include leader(.5);
+      @include trailer(.5);
+    }
+
+    &:before {
+      @include breakpoint(0 $primary-nav--inline) {
+        content: 'X';
+        display: block;
+        text-align: right;
+        color: white;
+        padding: 1em;
+        padding-bottom: 0;
+        font-size: 1.8em;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      @include breakpoint($primary-nav--inline) {
+        display: inline-block;
+      }
+
+      a {
+        @extend .button--list-menu;
+        @extend .pathway-gothic;
+        @include adjust-font-size-to(26px);
+        text-transform: none;
+        color: $pittsburgh-gold;
+        background: $black;
+        line-height: inherit;
+        @include breakpoint($primary-nav--inline) {
+          padding: .3em .5em ;
+          @include adjust-font-size-to(26px);
+          // Weird line height issue, makes it look like it's not centered
+          // line-height: 105%;
+        }
+
+        &:hover {
+            background: lighten($brown, 5);
+            color: $pittsburgh-gold;
+            @include breakpoint($primary-nav--inline) {
+              background: $royal-blue;
+              @include border-radius(5px);
+            }
+        }
+      }
+    }
+  }
+}

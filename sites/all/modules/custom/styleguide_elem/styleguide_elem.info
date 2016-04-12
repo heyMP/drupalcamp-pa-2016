@@ -1,0 +1,4 @@
+name = Styleguide Elements
+description = Add custom HTML to your Styleguides
+core = 7.x
+dependencies[] = styleguide

@@ -1,0 +1,9 @@
+#header {
+  padding: 3em 0 2em;
+  background: black image-url('bg-dcamppa.jpg') no-repeat center -6.5em fixed;
+  display: block;
+  overflow: hidden;
+  @include breakpoint($sitname--logo-name-inline-stop) {
+    background-size: cover;
+  }
+}

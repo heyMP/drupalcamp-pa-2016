@@ -1,0 +1,24 @@
+name = Security Update
+description = Updates existing drupal 7 site security to protect from owasp top 10.
+package = PDI Secure modules
+core = 7.x
+
+;contrib security REQUIRED
+dependencies[] = honeypot
+dependencies[] = security_review
+dependencies[] = seckit
+dependencies[] = session_limit
+dependencies[] = genpass
+dependencies[] = login_security
+dependencies[] = password_policy
+dependencies[] = autologout
+dependencies[] = flood_control
+dependencies[] = username_enumeration_prevention
+dependencies[] = pci_update
+dependencies[] = hacked
+;dependencies[] = securelogin**
+
+;contrib security OPTIONAL
+;dependencies[] = coder
+;dependencies[] = md5check**
+;dependencies[] = logging_alerts**

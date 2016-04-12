@@ -1,0 +1,18 @@
+#menu {
+  .menu-block-wrapper {
+    @include breakpoint(0 $primary-nav--inline) {
+      @include translateY(-100%);
+      @include transition-property(all);
+      @include transition-duration(.4s);
+    }
+  }
+
+  &.open .menu-block-wrapper {
+    @include translateY(0);
+  }
+
+  &.open:after {
+    @include transition-property(color, background-color);
+    color: $pittsburgh-gold;
+  }
+}

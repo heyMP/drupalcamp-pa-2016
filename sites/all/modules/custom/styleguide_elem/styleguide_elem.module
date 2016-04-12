@@ -1,0 +1,20 @@
+<?php
+
+function styleguide_elem_styleguide() {
+  $items['library'] = array(
+    'title' => t('UI library'),
+    'description' => t('A library of our UI elements'),
+    'content' => theme('styleguide_elem_library'),
+    'group' => t('Custom'),
+  );
+
+  return $items;
+}
+
+function styleguide_elem_theme(){
+  return array (
+    'styleguide_elem_library' => array(
+      'template' => 'styleguide-elem-library',
+    ),
+  );
+}
