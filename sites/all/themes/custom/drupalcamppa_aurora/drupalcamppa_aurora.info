@@ -21,6 +21,7 @@ regions[footer]       = 'Footer'
 
 stylesheets[all][] = 'css/styles.css'
 stylesheets[print][] = 'css/print.css'
+stylesheets[all][] = 'css/tweaks.css'
 
 ; ========================================
 ; Scripts
