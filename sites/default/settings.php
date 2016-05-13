@@ -215,28 +215,14 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => '',
-      'username' => '',
-      'password' => '',
+      'database' => 'drupalcampa2016',
+      'username' => 'root',
+      'password' => 'root',
       'host' => 'localhost',
-      'port' => '',
       'driver' => 'mysql',
-      'prefix' => '',
     ),
   ),
 );
-
-if (isset($_ENV['LOGNAME']) && $_ENV['LOGNAME'] == 'michaelpotter') {
-  $databases['default']['default'] = array(
-    'database' => 'drupalcamppa',
-    'username' => 'root',
-    'password' => 'root',
-    'host' => 'localhost',
-    'driver' => 'mysql',
-    'port' => '',
-    'prefix' => '',
-  );
-}
 
 
 /**

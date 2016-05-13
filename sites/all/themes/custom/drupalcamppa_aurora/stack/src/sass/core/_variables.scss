@@ -1,0 +1,15 @@
+// Global
+$base-font-size: 16px;
+$base-line-height: 1.8em;
+$container-max-width: 50em;
+
+// Materialize
+$primary-color: purple;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+$secondary-color: orange;
+$success-color: green;
+$error-color: red;
+$link-color: black;
+$card-link-color: pink;
+$input-border-color: gray;

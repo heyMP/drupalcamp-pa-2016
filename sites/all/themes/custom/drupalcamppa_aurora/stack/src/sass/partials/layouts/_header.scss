@@ -1,0 +1,11 @@
+#header {
+  padding: 3.5em 0 2em;
+  background: black url('../images/2016-Header-Image-Web.jpg') no-repeat center -16rem fixed;
+  background-size: cover;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  @include breakpoint($sitname--logo-name-inline) {
+    background-position: center -18em;
+  }
+}
