@@ -83,3 +83,17 @@ input#edit-submit:hover {
 #footer {
 	background-color: #0a5b8b;
 }
+
+.view-schedule .schedule__group {
+	padding: 1em;
+	border: 3px dotted gray;
+}
+.view-schedule .schedule__item {
+	background: #00335b;
+}
+.view-schedule .schedule__item .title {
+	color: #53d292;
+}
+.view-schedule .schedule__item .event-name a:hover {
+	color: #53d292;
+}
