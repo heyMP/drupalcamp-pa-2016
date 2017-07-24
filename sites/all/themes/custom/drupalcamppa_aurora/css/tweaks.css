@@ -79,6 +79,7 @@ input#edit-submit:hover {
 .view-speakers .views-field-nothing .field-name-field-profile-job-title,
 .view-speakers .views-field-nothing .field-name-field-profile-org {
 	font-size: .9em;
+	line-height: 20px;
 }
 
 @media (min-width: 50em) {
