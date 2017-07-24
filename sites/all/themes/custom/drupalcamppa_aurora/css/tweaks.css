@@ -48,6 +48,10 @@ input#edit-submit:hover {
 	color: #53d292;
 }
 
+.view-speakers .views-row {
+	width: 90%;
+}
+
 
 @media (min-width: 50em) {
 	#main-prefix.child-elements-3 .block:nth-of-type(2) {
@@ -110,14 +114,6 @@ input#edit-submit:hover {
 		-ms-justify-content: space-between;
 		-o-justify-content: space-between;
 		justify-content: space-between;
-	}
-}
-
-@media (min-width: 0) {
-
-	.view-speakers .views-row {
-		text-align: center;
-		width: 90%;
 	}
 }
 
