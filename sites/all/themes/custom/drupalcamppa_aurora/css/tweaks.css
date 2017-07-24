@@ -57,12 +57,22 @@ input#edit-submit:hover {
 .view-speakers .views-field-picture img {
 	/*border: 10px solid #0A5B8B;*/
 	border-radius: 50%;
+	display: inline-block;
+	padding: 10px
 }
 
 .view-speakers .views-field-picture img:after {
-	background: linear-gradient(to right, #bcbcbc 25%,#ffcd02 25%, #ffcd02 50%, #e84f47 50%, #e84f47 75%, #65c1ac 75%);
+	background: #0a5b8b;
+	background: -moz-linear-gradient(left, #0a5b8b 0%, #207cca 50%, #38a58f 50%);
+	background: -webkit-linear-gradient(left, #0a5b8b 0%,#207cca 50%, #38a58f 50%);
+	background: linear-gradient(to right, #0a5b8b 0%,#207cca 50%,#38a58f 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a5b8b', endColorstr='#38a58f',GradientType=1 ); 
 	content: :' ';
 	display: block;
+}
+
+.view-speakers .views-row .views-field-picture {
+	border-radius: 50%;
 }
 
 
