@@ -100,6 +100,16 @@ input#edit-submit:hover {
 
 	.view-speakers .views-field-nothing {
 		padding-left: 3%;
+    display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-align-items: center;
+		-moz-align-items: center;
+		-ms-align-items: center;
+		-o-align-items: center;
+		align-items: center;
 	}
 }
 
