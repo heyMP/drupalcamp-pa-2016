@@ -61,7 +61,7 @@ input#edit-submit:hover {
 	padding: 10px
 }
 
-.view-speakers .views-field-picture img:after {
+.view-speakers .views-field-picture {
 	background: #0a5b8b;
 	background: -moz-linear-gradient(left, #0a5b8b 0%, #207cca 50%, #38a58f 50%);
 	background: -webkit-linear-gradient(left, #0a5b8b 0%,#207cca 50%, #38a58f 50%);
