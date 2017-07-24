@@ -76,6 +76,10 @@ input#edit-submit:hover {
 	font-weight: bold;
 }
 
+.view-speakers .views-field-nothing .field-name-field-profile-job-title,
+.view-speakers .views-field-nothing .field-name-field-profile-org {
+	font-size: .9em;
+}
 
 @media (min-width: 50em) {
 	#main-prefix.child-elements-3 .block:nth-of-type(2) {
