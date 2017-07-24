@@ -54,6 +54,15 @@ input#edit-submit:hover {
 	width: 90%;
 }
 
+.view-speakers .views-field-picture img {
+	/*border: 10px solid #0A5B8B;*/
+	border-radius: 50%;
+}
+
+.view-speakers .views-field-picture img:after {
+	background: linear-gradient(to right, #bcbcbc 25%,#ffcd02 25%, #ffcd02 50%, #e84f47 50%, #e84f47 75%, #65c1ac 75%);
+}
+
 
 @media (min-width: 50em) {
 	#main-prefix.child-elements-3 .block:nth-of-type(2) {
@@ -72,7 +81,12 @@ input#edit-submit:hover {
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
+		text-align: left;
 		width: 48%;
+	}
+
+	.view-speakers .views-field-nothing {
+		padding-left: 3%;
 	}
 }
 
