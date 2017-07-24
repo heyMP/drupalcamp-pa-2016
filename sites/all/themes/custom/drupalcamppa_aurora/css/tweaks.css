@@ -60,7 +60,7 @@ input#edit-submit:hover {
 	display: inline-block;
 	padding: 10px;
 	background-clip: content-box;
-  border: 10px solid #0a5b8b;
+  border: 8px solid #0a5b8b;
   background: #38a58f;
 }
 
