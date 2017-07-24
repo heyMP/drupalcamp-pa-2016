@@ -59,15 +59,12 @@ input#edit-submit:hover {
 	border-radius: 50%;
 	display: inline-block;
 	padding: 10px
+	background-clip: content-box;
+  border: 10px solid #0a5b8b;
+  background: #38a58f;
 }
 
 .view-speakers .views-field-picture {
-	background: #0a5b8b;
-	background: -moz-linear-gradient(left, #0a5b8b 0%, #207cca 50%, #38a58f 50%);
-	background: -webkit-linear-gradient(left, #0a5b8b 0%,#207cca 50%, #38a58f 50%);
-	background: linear-gradient(to right, #0a5b8b 0%,#207cca 50%,#38a58f 50%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a5b8b', endColorstr='#38a58f',GradientType=1 ); 
-	content: :' ';
 	display: block;
 }
 
