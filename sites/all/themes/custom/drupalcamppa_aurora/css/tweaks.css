@@ -70,11 +70,6 @@ input#edit-submit:hover {
 }
 
 .view-speakers .views-row .views-field-picture {
-	-webkit-transition: width 0.3s ease;                  
-  -moz-transition: width 0.3s ease;                 
-  -o-transition: width 0.3s ease;   
-  -ms-transition: width 0.3s ease;          
-  transition: width 0.3s ease;
 	border-radius: 50%;
 }
 
