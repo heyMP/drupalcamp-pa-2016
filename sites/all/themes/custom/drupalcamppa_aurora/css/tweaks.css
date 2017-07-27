@@ -117,6 +117,7 @@ input#edit-submit:hover {
 		-ms-align-items: center;
 		-o-align-items: center;
 		align-items: center;
+		width: 50%;
 	}
 }
 
